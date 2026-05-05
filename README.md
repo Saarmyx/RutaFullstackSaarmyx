@@ -1,193 +1,167 @@
-# 🧠 Ruta de Aprendizaje – Ingeniería de Software (Versión Optimizada PRO)
+# 🔰 FASE 0
 
----
+### Visual Studio Code
 
-## 🔰 FASE 0 — Fundamentos (No negociables)
+- [Curso de Visual Studio Code](https://youtu.be/TbzrOz8HbFM)
 
-### Herramientas
+### Markdown
 
-- _Markdown_
-  https://youtu.be/FlsoBiteuPM?si=rEN-8wIMm5Mzup-y
+- [Curso de Markdown](https://youtu.be/FlsoBiteuPM)
 
-- _VSCode_
-  https://youtu.be/TbzrOz8HbFM?si=kttXYjfUi5Gy77hs
+### Git & GitHub
 
-- _Git & GitHub_
-  https://youtu.be/9ZJ-K-zk_Go?si=baKlawplNbaHo8Bt
+- [Curso de Git & GitHub](https://youtu.be/9ZJ-K-zk_Go)
 
----
+# 🌐 FASE 1
 
-## 🌐 FASE 1 — Base Web (Frontend)
+### HTML & CSS
 
-### HTML + CSS
+- [Curso de HTML & CSS](https://youtu.be/ELSm-G201Ls)
 
-- https://youtu.be/ELSm-G201Ls?si=9BPFahkAaOOxpWS4
+### JavaScript
 
-### JavaScript (progresivo)
+- [Curso de JavaScript Junior](https://youtu.be/z95mZVUcJ-E)
 
-- Junior
-  https://youtu.be/z95mZVUcJ-E?si=VM8o4b3b28VtRl-k ;
+# 🧠 FASE 2
 
-- Mid
-  https://youtu.be/xOinGb2MZSk?si=HllMl5oVPRAwE90- ;
+### JavaScript (intermedio)
 
-- Master
-  https://youtu.be/EbMi1Qj4rVE?si=ePzKosLm8LgGsErp ;
+- [Curso de JavaScript Mid Level](https://youtu.be/xOinGb2MZSk)
+
+### Programación Orientada a Objetos
+
+- [Curso de POO](https://youtu.be/HtKqSJX7VoM)
+
+# 🟦 FASE 3
 
 ### TypeScript
 
-- https://youtu.be/ELSm-G201Ls?si=9BPFahkAaOOxpWS4
+- [Curso de TypeScript](https://youtu.be/30LWjhZzg50)
 
----
-
-## ⚛️ FASE 2 — Frontend Avanzado
+# ⚛️ FASE 4
 
 ### React
 
-- https://youtu.be/Dl8x8EWXq8s?si=aNpYgu9nQ6xNRmIf
+- [Curso de React](https://youtu.be/Dl8x8EWXq8s)
 
 ### React Native
 
-- https://youtu.be/5DAEdXKp7QA?si=opzmDTN50o7vL4zI
+- [Curso de React Native](https://youtu.be/5DAEdXKp7QA)
 
-### Extra importante
+# 🧩 FASE 5
 
-- Hooks
-- Estado global (Context / Redux)
-- Routing
+### Node.js
 
----
+- [Curso de ](https://youtu.be/1hpc70_OoAg)
 
-## 🧩 FASE 3 — Backend
+### Express.js
 
-### Principal (RECOMENDADO)
+- [Curso de Express.js]()
 
-#### Node.js
-
-- https://youtu.be/1hpc70_OoAg?si=cXzKxRj7nXlzfx3J
-- Express.js
-- APIs REST
-- Middleware
-
----
-
-### Alternativa secundaria (elige 1)
-
-#### Java
-
-- https://youtu.be/JOAqpdM36wI?si=WxScQW_xLIDl3UXu
-- Spring Boot
-
-#### Python
-
-- Flask / Django
-
-#### C#
-
-- ASP.NET Core
-
-#### PHP (opcional)
-
-- Laravel
-
----
-
-## 🗄️ FASE 4 — Bases de Datos
+# 🗄️ FASE 6
 
 ### SQL
 
-- https://youtu.be/DFg1V-rO6Pg?si=Fbj9NtlMR9FyB7FV
+- [Curso de SQL](https://youtu.be/DFg1V-rO6Pg)
 
-### Conceptos
+### MongoDB
 
-- Modelado
-- Relaciones
-- Normalización
+- [Curso de MongoDB]()
 
-### NoSQL
+# 🧪 FASE 7
 
-- MongoDB
+### Jest
 
----
+[Curso de Jest](https://youtu.be/7r4xVDI2vho)
 
-## ⚙️ FASE 5 — Ingeniería Base
+### Cypress
 
-### Python
+[Curso de Cypress](https://youtu.be/5XQOK0v_YRE)
 
-- https://youtu.be/nKPbfIU442g?si=1jxkSM398s_Eg1yX
+# 🔐 FASE 8
 
-### Programación Orientada a Objetos (POO)
+### JSON Web Token
 
-- https://youtu.be/HtKqSJX7VoM?si=2Pm4i0-RHWXmMKLQ
+[Curso de JSON Web Token](https://youtu.be/7Q17ubqLfaM)
 
-### Estructuras de datos
+### OWASP Top 10
 
-- Arrays
-- Listas
-- Árboles
-- Hashmaps
+[Curso de OWASP](https://youtu.be/3Kq1MIfTWCE)
 
-### Algoritmos
+# ⚡ FASE 9
 
-- Búsqueda
-- Ordenamiento
-- Complejidad (Big O)
+### Lighthouse
 
----
+- [Curso de Lighthouse](https://youtu.be/N4F9q7F6xJQ)
 
-## 🧠 FASE 6 — Sistemas y Bajo Nivel
+### V8
+
+- [Curso de V8](https://youtu.be/xckH5s3UuX4)
+
+# 🧰 FASE 10
+
+### Postman
+
+- [Curso de Postman](https://youtu.be/VywxIQ2ZXw4)
+
+### Swagger
+
+- [Curso de Swagger](https://youtu.be/rvL5A1bPZCw)
+
+# 🧠 FASE 11
+
+### Design Patterns
+
+- [Curso de Design Patterns](https://youtu.be/v9ejT8FO-7I)
+
+### SOLID
+
+- [Curso de SOLID](https://youtu.be/pTB30aXS77U)
+
+# 🔄 FASE 12
+
+### Socket.IO
+
+- [Curso de Socket.IO](https://youtu.be/ZKEqqIO7n-k)
+
+# ⚙️ FASE 13
 
 ### Linux
 
-- https://youtube.com/playlist?list=PL2Z95CSZ1N4FKsZQKqCmbylDqssYFJX5A&si=B-IpNNEKQEoAbrJ8
-- Terminal
-- Procesos
-- Permisos
+- [Curso de Linux](https://youtube.com/playlist?list=PL2Z95CSZ1N4FKsZQKqCmbylDqssYFJX5A)
 
-### Lenguaje de bajo nivel (elige 1)
+### Bash
 
-#### C
+- [Curso de Bash](https://youtu.be/SPwyp2NG-bE)
 
-- Memoria
-- Punteros
+# 🚀 FASE 14
 
-#### C++
+### Docker
 
-- OOP + rendimiento
+- [Curso de Docker]()
 
-#### C#
+# 🤖 FASE 15 — IA
 
-- Backend empresarial
+### Python
 
----
+- [Curso de Python](https://youtu.be/nKPbfIU442g)
 
-## 🏗️ FASE 7 — Arquitectura
+### TensorFlow
 
-- MVC
-- Cliente-Servidor
-- REST vs GraphQL
-- Monolitos vs Microservicios
+- [Curso de TensorFlow](https://youtu.be/tPYj3fFJGjk)
 
----
+### PyTorch
 
-## 🚀 FASE 8 — DevOps
+- [Curso de PyTorch](https://youtu.be/Z_ikDlimN6A)
 
-- Docker
-- Deploy
-- CI/CD (básico)
+### Scikit-learn
 
----
+- [Curso de Scikit-learn](https://youtu.be/0Lt9w-BxKFQ)
 
-## 🎯 FASE 9 — Proyectos (OBLIGATORIO)
+### OpenAI API
 
-1. CRUD Full Stack
-2. Sistema de autenticación
-3. API propia
-4. App móvil (React Native)
+- [Curso de OpenAI API](https://youtu.be/8Zx8p8lXq8Y)
 
----
+### LangChain
 
-## 🧠 REGLA FINAL
-
-> Ver cursos ≠ saber programar
-> Construye, rompe, arregla, repite.
+- [Curso de LangChain](https://youtu.be/aywZrzNaKjs)
