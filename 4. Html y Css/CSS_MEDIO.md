@@ -38,7 +38,30 @@ h1 + p {
     color #666;
 }
 
-/* Selectores de adyacentes generalaes se le aplica el color a todos los p, que esta despues de una h1 */
+/* Selectores de adyacentes generales se le aplica el color a todos los p, que esta despues de una h1 */
 h1 ~ p {
     color #666;
+}
+
+/* Selector de hermano adyacente es una cadena de un p que le sigue un p que le sigue un h1 */
+h1 + p + p {
+    color:blue;
+}
+```
+
+# Herencia
+
+Habla de que algunas propiedades heredan y otras no
+
+Ejemplo:
+
+```css
+/* Al hacer esto le damos un colo al body y todos los elementos del body lo van a heredar */
+body {
+  color: blue;
+}
+
+h1 {
+  color: inherit; /* Esto hace que herede el color */
+}
 ```
