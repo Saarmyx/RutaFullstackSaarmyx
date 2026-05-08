@@ -62,6 +62,33 @@ body {
 }
 
 h1 {
-  color: inherit; /* Esto hace que herede el color */
+  color: inherit; /* Esto hace que herede el color de el elemento padre, sino tiene del abuelo y asi */
+  color: initial; /* Esto hace que use el valor por defecto, y que no herede el color */
+  color: revert; /* Esto hace que use el del usuario */
 }
+```
+
+# Cascada y especificidad
+
+La cascada nos ayuda con el orden de la especificidad, ya que aunque le pongamos 2 colores a un mismo texto, tomara el que tenga mayor especificidad
+
+```css
+/* 0,0,1 de especificidad */
+h1 {
+  color: white;
+}
+
+/* 0,1,0 de especificidad */
+.titulo {
+  color: white;
+}
+
+/* 1,0,0 de especificidad */
+#titulo {
+  color: white;
+}
+
+/* Ahi un nivel mas de especificidad, que es darle estilos en linea */
+
+Lo primero es el navegador, luego el user, luego la hoja de estilo o <style>, luego estilo en linea y luego !IMPORTANT M
 ```
