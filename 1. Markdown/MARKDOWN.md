@@ -1,25 +1,57 @@
-# 🧠 Aprendiendo Markdown
+`````md
+# 🧠 Guía Completa de Markdown
 
-Markdown es un lenguaje de marcado ligero que permite dar formato a texto de manera sencilla y rápida.
-Se usa principalmente en documentación, README, blogs y notas técnicas.
+Markdown es un lenguaje de marcado ligero diseñado para escribir texto con formato de forma rápida y legible.
+
+Se utiliza en:
+
+- README de GitHub
+- Documentación técnica
+- Blogs
+- Notas
+- Wikis
+- Foros
+- Chats compatibles
+- Sistemas de gestión de contenido
+
+La gracia de Markdown es simple:  
+el texto sigue siendo fácil de leer incluso sin renderizar. Algo que muchos documentos modernos olvidaron mientras intentaban convertirse en PowerPoint con ansiedad.
 
 ---
 
-## ✍️ Texto básico
+# ✍️ Texto básico
 
-Esto es un párrafo normal.
+Texto normal:
 
-Podemos aplicar:
+Esto es un párrafo común.
 
-- _Cursiva_
-- **Negrita**
-- **_Cursiva y negrita al mismo tiempo_**
+## Estilos de texto
 
-> Nota: Siempre deja un espacio entre el `#` y el texto en los encabezados.
+```md
+_Cursiva_
+_Cursiva_
+
+**Negrita**
+**Negrita**
+
+**_Negrita y cursiva_**
+**_Negrita y cursiva_**
+
+~~Texto tachado~~
+```
+
+Resultado:
+
+_Cursiva_  
+**Negrita**  
+**_Negrita y cursiva_**  
+~~Texto tachado~~
 
 ---
 
-## 🔠 Encabezados
+# 🔠 Encabezados
+
+Los encabezados se crean usando `#`.
 
 ```md
 # Nivel 1
@@ -33,256 +65,640 @@ Podemos aplicar:
 ##### Nivel 5
 
 ###### Nivel 6
+```
 
-Ejemplo:
+## Reglas importantes
 
-Encabezado de nivel 1
+- Siempre deja un espacio después del `#`
+- Usa solo un `#` por nivel
+- Mantén jerarquía lógica
 
-Encabezado de nivel 2
+Incorrecto:
 
-Encabezado de nivel 3
+```md
+###Texto
+```
 
-Encabezado de nivel 4
+Correcto:
 
-Encabezado de nivel 5
-
-Encabezado de nivel 6
+```md
+### Texto
 ```
 
 ---
 
-🔗 Enlaces
+# ➖ Líneas divisoras
 
-Enlace externo
+Sirven para separar secciones visualmente.
 
-[YouTube](https://youtube.com)
+```md
+---
+```
+
+También funcionan:
+
+```md
+---
+---
+```
 
 Resultado:
-YouTube
-
-Enlace interno (anclas)
-
-[Ir a Markdown](#-aprendiendo-markdown)
-
-> El texto del enlace debe coincidir con el encabezado en formato URL.
-
----
-
-🖼️ Imágenes
-
-![Texto alternativo](ruta/o/url.jpg)
-
-Ejemplo:
-
----
-
-➖ Divisores
-
-Se crean con tres guiones:
 
 ---
 
 ---
 
-📋 Listas
+# 📋 Listas
 
-Ordenadas
+## Listas ordenadas
 
-1. Elemento 1
-2. Elemento 2
-3. Elemento 3
+```md
+1. Elemento
+2. Elemento
+3. Elemento
+```
 
-No ordenadas
+Resultado:
 
+1. Elemento
+2. Elemento
+3. Elemento
+
+---
+
+## Listas no ordenadas
+
+```md
 - Elemento
 
 * Elemento
 
-Ejemplo:
-
-Ejemplo 1
-
-Ejemplo 2
-
-Ejemplo 3
-
----
-
-🔽 Sublistas
-
-Se crean con indentación (espacios o tabulación):
-
-- Lista principal
-  - Sublista
-
-Ejemplo:
-
-Lista mayor
-
-Sublista
-
----
-
-💬 Citas
-
-Se crean con >:
-
-> Esto es una cita
-
-Ejemplo:
-
-> Esto es una cita en línea - Santiago
-
-> Esto es una cita en bloque
-> con múltiples líneas
-> Santiago
-
----
-
-📊 Tablas
-
-| Nombre   | Edad | Correo            |
-| -------- | ---- | ----------------- |
-| Santiago | 18   | saarmyx@gmail.com |
-| Rosie    | 17   | No recuerdo       |
+- Elemento
+```
 
 Resultado:
 
-Nombre Edad Correo
+- Elemento
+- Elemento
+- Elemento
 
-Santiago 18 saarmyx@gmail.com
-Rosie 17 No recuerdo
+## Buenas prácticas
+
+Mantén el mismo símbolo en toda la lista.  
+Mezclar `-`, `*` y `+` porque sí es el equivalente visual a cables pelados dentro de un servidor.
 
 ---
 
-🧩 Código y destacado
+# 🔽 Sublistas
 
-Código en línea
+Se crean con indentación.
 
-`texto`
+```md
+- Frontend
+  - HTML
+  - CSS
+  - JavaScript
+```
+
+Resultado:
+
+- Frontend
+  - HTML
+  - CSS
+  - JavaScript
+
+---
+
+# ✔️ Checklist
+
+Muy usadas en GitHub y documentación.
+
+```md
+- [x] Terminado
+- [ ] Pendiente
+```
+
+Resultado:
+
+- [x] Terminado
+- [ ] Pendiente
+
+---
+
+# 💬 Citas
+
+Se crean usando `>`.
+
+```md
+> Esto es una cita
+```
+
+Resultado:
+
+> Esto es una cita
+
+---
+
+## Citas multilínea
+
+```md
+> Primera línea
+> Segunda línea
+> Tercera línea
+```
+
+Resultado:
+
+> Primera línea
+> Segunda línea
+> Tercera línea
+
+---
+
+# 🔗 Enlaces
+
+## Enlace básico
+
+```md
+[YouTube](https://youtube.com)
+```
+
+Resultado:
+
+[YouTube](https://youtube.com)
+
+---
+
+## Enlace con título
+
+```md
+[Google](https://google.com 'Buscador')
+```
+
+---
+
+## Enlaces reutilizables
+
+Útiles cuando un documento tiene muchos enlaces.
+
+```md
+[Google][1]
+[GitHub][2]
+
+[1]: https://google.com
+[2]: https://github.com
+```
+
+---
+
+## Enlaces internos (anclas)
+
+Permiten navegar dentro del documento.
+
+```md
+[Ir a Tablas](#-tablas)
+```
+
+### Cómo funcionan
+
+Markdown convierte encabezados en IDs:
+
+```md
+# 📊 Tablas
+```
+
+Se transforma aproximadamente en:
+
+```md
+#-tablas
+```
+
+---
+
+# 🖼️ Imágenes
+
+Sintaxis:
+
+```md
+![Texto alternativo](imagen.png)
+```
 
 Ejemplo:
-Esto es un texto destacado
 
-Bloques de código
+```md
+![Logo](https://ejemplo.com/logo.png)
+```
 
-````js
-function sumar(a, b) {
-  return a + b;
+## Texto alternativo
+
+El texto alternativo ayuda a:
+
+- Accesibilidad
+- Lectores de pantalla
+- SEO
+- Mostrar contexto si la imagen falla
+
+Algo que la mitad de internet ignora alegremente desde 2007.
+
+---
+
+# 🧩 Código
+
+## Código en línea
+
+Usa una sola comilla invertida:
+
+```md
+`console.log()`
+```
+
+Resultado:
+
+`console.log()`
+
+---
+
+## Bloques de código
+
+Usa tres comillas invertidas.
+
+````md
+```js
+function saludar() {
+  console.log('Hola')
 }
 ```
+````
 
 Resultado:
 
 ```js
-function sumar(a, b) {
-  return a + b;
+function saludar() {
+  console.log('Hola')
 }
 ```
 
 ---
 
-🌐 HTML en Markdown
+# 🎨 Resaltado de sintaxis
 
-Markdown permite usar HTML directamente:
+Puedes especificar el lenguaje:
 
-<form>
-  <label for="q">Buscar:</label>
-  <input type="search" id="q" name="q">
-</form>
-
-Resultado:
-
-<form>
-<label for="q">Buscar:</label>
-<input type="search" id="q" name="q">
-</form>
----
-
-🧠 Comentarios
-
-<!-- Esto es un comentario -->
-
-No se muestran en el resultado final.
-
-
----
-
-🔒 Escapar formato
-
-Para evitar que Markdown interprete símbolos, usa \:
-
-\*\*negrita\*\*
-\_cursiva\_
-
-Resultado:
-**negrita**
-_cursiva_
-
-
----
-
-⚡ Extras útiles (que curiosamente faltaban)
-
-✔️ Checklist (tareas)
-
-- [x] Completado
-- [ ] Pendiente
-
-Ejemplo:
-
-[x] Aprender Markdown básico
-
-[ ] Dejar de cometer errores tontos
-
-
-
----
-
-📌 Citas de código (lenguaje específico)
-
-Especificar lenguaje mejora el resaltado:
-
+````md
 ```python
-print("Hola mundo")
-
----
-
-### 📎 Referencias (enlaces reutilizables)
-
-```md
-[Google][1]
-
-[1]: https://google.com
-
-
----
-
-🧭 Saltos de línea
-
-Para forzar salto de línea:
-
-Usa dos espacios al final
-
-O una línea en blanco
-
-
-
----
-
-🧠 Buenas prácticas
-
-Mantén consistencia en estilos
-
-Usa encabezados para estructurar
-
-No abuses de HTML si Markdown lo resuelve
-
-Usa código formateado para ejemplos
-
-Mantén legibilidad (esto no es un experimento artístico)
+print("Hola")
+```
 ````
 
+Lenguajes comunes:
+
+- `js`
+- `python`
+- `html`
+- `css`
+- `bash`
+- `json`
+- `sql`
+- `cpp`
+
+---
+
+# 📊 Tablas
+
+```md
+| Nombre | Edad | País     |
+| ------ | ---- | -------- |
+| Ana    | 19   | Colombia |
+| Luis   | 22   | México   |
+```
+
+Resultado:
+
+| Nombre | Edad | País     |
+| ------ | ---- | -------- |
+| Ana    | 19   | Colombia |
+| Luis   | 22   | México   |
+
+---
+
+## Alineación de tablas
+
+```md
+| Izquierda | Centro | Derecha |
+| :-------- | :----: | ------: |
+| Texto     | Texto  |   Texto |
+```
+
+Resultado:
+
+| Izquierda | Centro | Derecha |
+| :-------- | :----: | ------: |
+| Texto     | Texto  |   Texto |
+
+---
+
+# 🌐 HTML dentro de Markdown
+
+Markdown permite HTML.
+
+```html
+<form>
+  <input type="text" />
+</form>
+```
+
+Resultado:
+
+<form>
+  <input type="text">
+</form>
+
+---
+
+## Cuándo usar HTML
+
+Úsalo solo cuando Markdown no pueda resolver algo fácilmente.
+
+Ejemplos válidos:
+
+- Formularios
+- Videos embebidos
+- Detalles desplegables
+- Estilos avanzados
+
+No conviertas Markdown en un Frankenstein HTML porque “se veía chévere”. La mantenibilidad existe por una razón.
+
+---
+
+# 📦 Bloques desplegables
+
+GitHub soporta `<details>`.
+
+```html
+<details>
+  <summary>Mostrar contenido</summary>
+
+  Texto oculto aquí.
+</details>
+```
+
+Resultado:
+
+<details>
+  <summary>Mostrar contenido</summary>
+
+Texto oculto aquí.
+
+</details>
+
+---
+
+# 🧠 Comentarios ocultos
+
+```md
+<!-- Esto no se muestra -->
+```
+
+Muy usados para:
+
+- Notas internas
+- TODOs
+- Indicaciones para colaboradores
+
+---
+
+# 🔒 Escapar caracteres
+
+Usa `\` para evitar formato.
+
+```md
+\*\*Texto\*\*
+```
+
+Resultado:
+
+**Texto**
+
+---
+
+# 🧭 Saltos de línea
+
+## Nuevo párrafo
+
+Deja una línea vacía.
+
+```md
+Texto 1
+
+Texto 2
+```
+
+---
+
+## Salto de línea simple
+
+Dos espacios al final:
+
+```md
+Línea 1  
+Línea 2
+```
+
+Resultado:
+
+Línea 1
+Línea 2
+
+---
+
+# 📌 Emojis
+
+GitHub soporta emojis por código.
+
+```md
+:rocket:
+:fire:
+:white_check_mark:
+```
+
+Resultado:
+
+🚀 🔥 ✅
+
+---
+
+# 🏷️ Badges
+
+Muy usados en README.
+
+```md
+![Version](https://img.shields.io/badge/version-1.0-blue)
+```
+
+Sirven para mostrar:
+
+- Versiones
+- Licencias
+- Build status
+- Cobertura
+- Tecnologías
+
+---
+
+# 🧮 Markdown avanzado de GitHub
+
+## Bloques de advertencia
+
+GitHub soporta:
+
+```md
+> [!NOTE]
+> Nota importante
+
+> [!WARNING]
+> Advertencia
+
+> [!TIP]
+> Consejo útil
+```
+
+Resultado aproximado:
+
+> [!NOTE]
+> Nota importante
+
+> [!WARNING]
+> Advertencia
+
+> [!TIP]
+> Consejo útil
+
+---
+
+# 🗂️ Organización recomendada
+
+Un buen documento Markdown suele tener:
+
+```md
+# Título
+
+## Introducción
+
+## Instalación
+
+## Uso
+
+## Ejemplos
+
+## Configuración
+
+## FAQ
+
+## Licencia
+```
+
+Porque sorprender al lector con una estructura caótica no es creatividad. Es sabotaje editorial.
+
+---
+
+# ⚡ Buenas prácticas
+
+## Haz esto
+
+- Usa encabezados correctamente
+- Mantén consistencia
+- Usa bloques de código
+- Separa secciones
+- Mantén legibilidad
+- Usa listas cuando ayuden
+
+---
+
+## Evita esto
+
+- Encabezados desordenados
+- Mezclar estilos
+- HTML innecesario
+- Bloques enormes de texto
+- Tablas absurdamente anchas
+- README escritos como si fueran manifiestos filosóficos
+
+---
+
+# 🧠 Diferencias entre Markdown y HTML
+
+| Markdown                 | HTML                  |
+| ------------------------ | --------------------- |
+| Más simple               | Más poderoso          |
+| Fácil de leer            | Más verboso           |
+| Ideal para documentación | Ideal para interfaces |
+| Rápido de escribir       | Más control visual    |
+
+---
+
+# 📚 Plataformas compatibles
+
+Markdown es usado en:
+
+- GitHub
+- GitLab
+- Discord
+- Reddit
+- Obsidian
+- Notion
+- Stack Overflow
+- VS Code
+- HackMD
+
+Cada plataforma tiene pequeñas diferencias. Porque claramente el universo no podía permitir un estándar perfectamente consistente.
+
+---
+
+# 🚀 Ejemplo completo
+
+````md
+# Proyecto
+
+## Descripción
+
+Este proyecto usa **Markdown**.
+
+## Tecnologías
+
+- HTML
+- CSS
+- JavaScript
+
+## Instalación
+
+```bash
+npm install
+```
+
+## Estado
+
+- [x] Backend
+- [ ] Frontend
+
+## Autor
+
+[Saarmyx](https://github.com/saarmyx)
+````
+
+---
+
+# 🏁 Conclusión
+
+Markdown no intenta reemplazar HTML.
+Intenta resolver el 90% de la escritura técnica con el 10% del esfuerzo.
+
+Y sinceramente, considerando cuántos documentos corporativos parecen diseñados por mapaches con acceso a Word, Markdown hizo un trabajo admirable.
+
 ```
 
 ```
+
+```
+
+```
+`````

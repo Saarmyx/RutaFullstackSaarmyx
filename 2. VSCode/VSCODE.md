@@ -1,339 +1,810 @@
-# 🧠 Introducción
+# 🧠 Visual Studio Code (VSCode)
 
-Programar en un bloc de notas o en editores de texto plano es posible… pero innecesariamente doloroso.
-Por eso utilizamos un **editor de código**, que nos facilita escribir, entender y mantener nuestro software.
+Programar usando únicamente un editor de texto plano es técnicamente posible.  
+También es técnicamente posible construir una casa con una cuchara.  
+La diferencia está en cuánto sufrimiento innecesario quieres tolerar.
 
-El editor más utilizado actualmente es **Visual Studio Code (VSCode)**, principalmente por las siguientes razones:
+Por eso existen los **editores de código** y los **IDE**, herramientas diseñadas para facilitar el desarrollo de software moderno.
 
-## 🚀 ¿Por qué VSCode?
+Actualmente, el editor más utilizado es **Visual Studio Code (VSCode)**.
 
-### 🧩 Inteligencia
+---
 
-Cuenta con autocompletado inteligente (_IntelliSense_), sugerencias de código, detección de errores en tiempo real y soporte para múltiples lenguajes.
+# 🚀 ¿Qué es VSCode?
 
-### 🔌 Extensibilidad
+**Visual Studio Code** es un editor de código desarrollado por [Microsoft](https://code.visualstudio.com?utm_source=chatgpt.com).
 
-Podemos instalar extensiones para adaptar el editor a cualquier tecnología o flujo de trabajo (frontend, backend, DevOps, etc.).
+Está basado en:
 
-### 🔄 Control de versiones integrado
+- Electron
+- TypeScript
+- Node.js
 
-Integra **Git** de forma nativa, permitiendo trabajar con repositorios sin salir del editor.
+Y combina:
 
-### 🐞 Debugging
+- Ligereza
+- Personalización
+- Soporte masivo de extensiones
+- Herramientas avanzadas de desarrollo
 
-Permite ejecutar código paso a paso, inspeccionar variables y detectar errores con precisión.
+---
 
-### 🎨 Personalización
+# ⚔️ Editor de texto vs Editor de código vs IDE
 
-Podemos modificar prácticamente todo: temas, iconos, atajos, comportamiento del editor, etc.
+| Herramienta      | Función                        |
+| ---------------- | ------------------------------ |
+| Bloc de notas    | Texto plano                    |
+| Editor de código | Ayuda a programar              |
+| IDE              | Entorno completo de desarrollo |
 
-### 🧠 Editor híbrido
+---
 
-VSCode puede funcionar como:
+## 📄 Editor de texto
 
-- **Editor de código** ligero
-- **IDE completo** dependiendo de las extensiones instaladas
+Solo permite escribir texto.
+
+Ejemplos:
+
+- Bloc de notas
+- Nano
+- Gedit
+
+No tiene:
+
+- Autocompletado
+- Depuración
+- Detección de errores
+- Integración avanzada
+
+---
+
+## 💻 Editor de código
+
+Está diseñado específicamente para programar.
+
+Incluye:
+
+- Colores de sintaxis
+- IntelliSense
+- Extensiones
+- Terminal integrada
+
+VSCode pertenece principalmente a esta categoría.
+
+---
+
+## 🧠 IDE (Integrated Development Environment)
+
+Incluye herramientas completas de desarrollo:
+
+- Editor
+- Compilador
+- Depurador
+- Gestión de dependencias
+- Testing
+- Integración avanzada
+
+Ejemplos:
+
+- IntelliJ IDEA
+- Visual Studio
+- Android Studio
+
+---
+
+# 🧩 ¿Por qué VSCode es tan popular?
+
+## 🧠 IntelliSense
+
+Sistema inteligente de autocompletado.
+
+Ofrece:
+
+- Sugerencias de código
+- Métodos disponibles
+- Parámetros
+- Tipado
+- Detección de errores
+
+Ejemplo:
+
+```js id="i0u3jv"
+document.querySelector()
+```
+
+VSCode detecta automáticamente métodos y propiedades.
+
+---
+
+## 🔌 Extensiones
+
+Una de las mayores fortalezas de VSCode.
+
+Puedes convertirlo en:
+
+- Editor frontend
+- IDE backend
+- Editor Python
+- Entorno DevOps
+- Editor para Docker
+- Editor para IA
+- Editor para ciencia de datos
+
+Todo mediante extensiones.
+
+---
+
+## 🌿 Integración con Git
+
+VSCode incluye soporte nativo para Git.
+
+Permite:
+
+- Ver cambios
+- Crear commits
+- Manejar ramas
+- Resolver conflictos
+- Conectarse con GitHub
+
+Sin abrir terminal. Aunque eventualmente igual terminarás abriendo terminal porque Git disfruta humillando humanos en múltiples interfaces.
+
+---
+
+## 🐞 Debugging
+
+Depuración integrada.
+
+Permite:
+
+- Ejecutar paso a paso
+- Colocar breakpoints
+- Ver variables
+- Analizar stack traces
+
+Esto reduce muchísimo el clásico:
+
+```txt
+"¿Por qué no funciona?"
+```
+
+seguido de mirar el monitor con resentimiento durante 20 minutos.
+
+---
+
+## 🎨 Personalización
+
+VSCode puede modificarse casi completamente.
+
+Puedes cambiar:
+
+- Temas
+- Iconos
+- Fuentes
+- Atajos
+- Layout
+- Animaciones
+- Comportamiento interno
+
+---
+
+## ⚡ Rendimiento
+
+VSCode es relativamente ligero comparado con IDE completos.
+
+Aunque si instalas 73 extensiones inútiles porque “algún día podrían servir”, eventualmente se transforma en una tostadora existencial con sintaxis coloreada.
 
 ---
 
 # ⚙️ Instalación
 
-1. Ir al navegador
-2. Acceder al sitio oficial: https://code.visualstudio.com/
-3. Descargar e instalar según tu sistema operativo
+## 🌐 Sitio oficial
+
+[Visual Studio Code Official Website](https://code.visualstudio.com?utm_source=chatgpt.com)
 
 ---
 
-# 🎛️ Configuración inicial
+## 📥 Pasos
 
-Al abrir VSCode por primera vez:
+1. Entrar al sitio oficial
+2. Descargar según tu sistema operativo
+3. Ejecutar instalador
+4. Completar instalación
 
-- Selecciona el **tema oscuro (Dark Mode)**
-- Configura preferencias básicas
-- Finaliza el asistente
+---
 
-> _(Sí, puedes usar modo claro… pero luego no te quejes de tus ojos.)_
+## 🖥️ Sistemas compatibles
+
+- Windows
+- Linux
+- macOS
 
 ---
 
 # 🧱 Interfaz de VSCode
 
-## 📌 Barra de actividad (lado izquierdo)
-
-1. 📁 Explorer → Archivos del proyecto
-2. 🔍 Search → Búsqueda global
-3. 🌿 Source Control → Git
-4. 🐞 Run & Debug → Ejecución y depuración
-5. 🧩 Extensions → Extensiones
+La interfaz está dividida en múltiples áreas.
 
 ---
 
-## 📂 Área _Explorer_
+# 📌 Barra de actividad (Activity Bar)
 
-Aquí gestionas tu proyecto:
+Ubicada normalmente a la izquierda.
 
-- Crear/eliminar archivos y carpetas
+Incluye accesos rápidos a:
+
+1. 📁 Explorer
+2. 🔍 Search
+3. 🌿 Source Control
+4. 🐞 Run & Debug
+5. 🧩 Extensions
+
+---
+
+# 📂 Explorer
+
+Gestión de archivos y carpetas.
+
+Permite:
+
+- Crear archivos
+- Crear carpetas
 - Renombrar
 - Mover elementos
-- Ver estructura completa
-
-### Incluye:
-
-- Carpeta raíz del proyecto
-- Acciones rápidas (nuevo archivo, nueva carpeta, refrescar)
+- Abrir proyectos
 
 ---
 
-## 🔎 Área _Search_
+## 📁 Workspace
 
-Permite buscar en todo el proyecto:
+VSCode trabaja mediante **workspaces**.
 
-- `Ctrl + F` → Buscar en archivo actual
-- `Ctrl + Shift + F` → Buscar en todo el proyecto
+Un workspace representa:
 
-### Opciones:
-
-- **Match Case** → Sensible a mayúsculas
-- **Match Whole Word** → Coincidencias exactas
-- **Regex** → Búsquedas avanzadas
-- **Replace** → Reemplazar texto
+- Un proyecto
+- O múltiples carpetas relacionadas
 
 ---
 
-## 🌿 Área _Source Control_
+## 📄 Archivos importantes comunes
 
-Permite gestionar versiones con Git.
+| Archivo                 | Función                    |
+| ----------------------- | -------------------------- |
+| `package.json`          | Dependencias Node.js       |
+| `.gitignore`            | Archivos ignorados por Git |
+| `README.md`             | Documentación              |
+| `.vscode/settings.json` | Configuración local        |
 
-### Inicializar repositorio:
+---
 
-```bash
+# 🔎 Search
+
+Permite buscar texto dentro del proyecto completo.
+
+---
+
+## 🔍 Atajos útiles
+
+| Acción            | Atajo              |
+| ----------------- | ------------------ |
+| Buscar en archivo | `Ctrl + F`         |
+| Reemplazar        | `Ctrl + H`         |
+| Buscar global     | `Ctrl + Shift + F` |
+
+---
+
+## 🧪 Expresiones regulares (Regex)
+
+VSCode soporta búsquedas avanzadas mediante Regex.
+
+Ejemplo:
+
+```regex
+^[A-Z].*
+```
+
+Busca líneas que comiencen con mayúscula.
+
+---
+
+# 🌿 Source Control
+
+Sección integrada de Git.
+
+---
+
+## 🔧 Inicializar repositorio
+
+```bash id="x5th1x"
 git init
 ```
 
-### Comandos básicos:
+---
 
-```bash
+## 📊 Ver estado
+
+```bash id="q9mk4f"
 git status
+```
+
+---
+
+## 📜 Historial
+
+```bash id="vqohz2"
 git log --oneline --all
 ```
 
-### Funciones:
+---
 
-- Crear commits
-- Ver cambios
-- Manejar ramas (branches)
-- Conectar con GitHub
-- También puedes ver el historial en Timeline.
+## 🌱 Branches
+
+Git permite trabajar con ramas independientes.
+
+Ejemplo:
+
+```bash id="2t5mlv"
+git checkout -b nueva-rama
+```
 
 ---
 
-## 🐞 Área Run and Debug
+## 🔗 Conexión con GitHub
 
-Permite ejecutar código y analizarlo paso a paso.
+VSCode puede:
 
-### Funciones:
-
-- Ejecutar programas
-- Colocar breakpoints
-- Ver flujo de ejecución
-- Inspeccionar variables
+- Clonar repositorios
+- Publicar proyectos
+- Hacer pull/push
+- Resolver conflictos
 
 ---
 
-## 🧩 Área Extensions
+# 🐞 Run and Debug
 
-Permite ampliar funcionalidades.
+Área dedicada a ejecución y depuración.
 
-### Extensiones esenciales:
+---
 
-- Tema (Dark Theme)
-- Iconos (Material Icon Theme)
+## 🧷 Breakpoints
+
+Permiten pausar ejecución.
+
+Se crean haciendo clic al lado del número de línea.
+
+---
+
+## ▶️ Controles principales
+
+| Acción    | Función             |
+| --------- | ------------------- |
+| Continue  | Continuar ejecución |
+| Step Over | Saltar línea        |
+| Step Into | Entrar función      |
+| Step Out  | Salir función       |
+
+---
+
+## 🧠 Variables
+
+Durante debugging puedes inspeccionar:
+
+- Variables locales
+- Variables globales
+- Call stack
+- Watch expressions
+
+---
+
+# 🧩 Extensions
+
+Marketplace de extensiones.
+
+---
+
+# 📦 Extensiones recomendadas
+
+## 🎨 Apariencia
+
+- Nexora Theme
+- One Dark Pro
+- Catppuccin
+
+---
+
+## 🌿 Git
+
 - GitLens
-- Indent Rainbow
 
-### Para desarrollo web:
+---
+
+## 🌐 Desarrollo web
 
 - Live Server
+- Prettier
+- ESLint
 
 ---
 
-## 📊 Barra inferior (Status Bar)
+## 🧠 Productividad
 
-### Lado izquierdo:
-
-- Errores y advertencias
-
-### Lado derecho:
-
-- Línea y columna actual
-- Tipo de indentación (espacios o tabs)
-- Codificación (UTF-8)
-- Tipo de salto de línea (CRLF / LF)
-- Lenguaje activo
+- Error Lens
+- Indent Rainbow
+- Todo Tree
 
 ---
 
-# ⚙️ User Settings
+## 🐳 DevOps
+
+- Docker
+- Remote SSH
+
+---
+
+# ⚡ Live Preview
+
+Extensión muy usada en frontend.
+
+Permite:
+
+- Abrir proyectos web localmente
+- Recargar automáticamente al guardar
+
+Ideal para HTML/CSS/JS.
+
+---
+
+# 📊 Status Bar
+
+Barra inferior del editor.
+
+---
+
+## 📍 Información mostrada
+
+- Rama Git actual
+- Errores
+- Advertencias
+- Línea y columna
+- Tipo de archivo
+- UTF-8
+- LF / CRLF
+- Espacios o tabs
+
+---
+
+# ⚙️ Configuración
+
+VSCode usa configuraciones JSON.
+
+---
+
+# 🧪 User Settings
 
 Acceso:
 
-`Ctrl + Shift + P` → "User Settings"
+```txt
+Ctrl + Shift + P
+```
 
-Configuración mediante archivo `.json`
+Buscar:
+
+```txt
+Preferences: Open User Settings (JSON)
+```
 
 ---
 
-## 🧪 Configuraciones útiles
+# 🧩 Configuraciones útiles
 
-### Ocultar barra lateral
+## 💾 Auto guardado
 
-```json
-"workbench.sideBar.visible": false
-```
-
-### Desactivar breadcrumbs
-
-```json
-"breadcrumbs.enabled": false
-```
-
-### Auto guardado
-
-```json
+```json id="20m2wv"
 "files.autoSave": "afterDelay",
-"files.autoSaveDelay": 5000
+"files.autoSaveDelay": 3000
 ```
 
-### Edición vinculada (HTML)
+---
 
-```json
+## 🔗 Linked Editing
+
+Muy útil en HTML.
+
+```json id="ly7y5e"
 "editor.linkedEditing": true
 ```
 
-### Mostrar archivos ocultos
+---
 
-```json
+## 🧹 Minimapa
+
+Desactivar minimapa:
+
+```json id="0exm1z"
+"editor.minimap.enabled": false
+```
+
+---
+
+## 📏 Tamaño de fuente
+
+```json id="n24uwl"
+"editor.fontSize": 16
+```
+
+---
+
+## ✨ Fuente personalizada
+
+```json id="40ls7g"
+"editor.fontFamily": "JetBrains Mono"
+```
+
+---
+
+## 🔤 Ligaduras tipográficas
+
+```json id="j6nmlz"
+"editor.fontLigatures": true
+```
+
+---
+
+## 🧠 Formateo automático
+
+```json id="rj6az6"
+"editor.formatOnSave": true
+```
+
+---
+
+## 📂 Excluir carpetas
+
+```json id="s0zw93"
 "files.exclude": {
-"\*\*/.git": false
+  "**/.git": true,
+  "**/node_modules": true
 }
 ```
 
-### Tamaño de indentación
+---
 
-```json
-"editor.tabSize": 4
-```
+# 🎨 Temas
 
-### Resaltar línea actual
+VSCode soporta temas completos.
 
-```json
-"editor.renderLineHighlight": "line"
-```
+---
+
+## 🌑 Temas populares
+
+- Nexora Theme
+- One Dark Pro
+- Dracula
+- Catppuccin
+- Tokyo Night
+- Nord
+
+Porque claramente escribir código mejora psicológicamente cuando los colores correctos activan las neuronas decorativas del desarrollador.
+
+---
+
+# 🔤 Fuentes populares para proPgramar
+
+- JetBrains Mono
+- Fira Code
+- Cascadia Code
+- Inter
+- SF Mono
 
 ---
 
 # ⌨️ Atajos de teclado
 
-- Guardar → `Ctrl + S`
-- Abrir archivo → `Ctrl + O`
-- Buscar global → `Ctrl + Shift + F`
-- Buscar en archivo → `Ctrl + F`
-- Reemplazar → `Ctrl + H`
-- Paleta de comandos → `Ctrl + Shift + P`
-- Nueva ventana → `Ctrl + Shift + N`
-- Ir a línea → `Ctrl + G`
-- Duplicar línea → `Shift + Alt + ↓`
-- Mover línea → `Alt + ↑ / ↓`
-- Múltiples cursores → `Ctrl + Alt + ↑ / ↓`
-- Selección múltiple → `Ctrl + Shift + L`
-- Ir a definición → `F12`
-- Modo Zen → `Ctrl + K Z`
+## 📄 Navegación
+
+| Acción          | Atajo              |
+| --------------- | ------------------ |
+| Abrir archivo   | `Ctrl + O`         |
+| Ir a línea      | `Ctrl + G`         |
+| Paleta comandos | `Ctrl + Shift + P` |
+
+---
+
+## ✏️ Edición
+
+| Acción         | Atajo                |
+| -------------- | -------------------- |
+| Duplicar línea | `Shift + Alt + ↓`    |
+| Mover línea    | `Alt + ↑ / ↓`        |
+| Multicursor    | `Ctrl + Alt + ↑ / ↓` |
+
+---
+
+## 🧠 Productividad
+
+| Acción             | Atajo        |
+| ------------------ | ------------ |
+| Modo Zen           | `Ctrl + K Z` |
+| Terminal integrada | `Ctrl + J`   |
+| Comentar línea     | `Ctrl + /`   |
 
 ---
 
 # 🧩 Snippets
 
-Plantillas reutilizables para acelerar escritura de código.
+Plantillas reutilizables.
 
-### Ejemplo:
+---
 
-```json
+## 📦 Ejemplo
+
+```json id="4al91o"
 {
-  "Saludo": {
-    "prefix": "sal",
-    "body": ["console.log('Hola mi nombre es ${1:Nombre} y mi apellido es ${2:Apellido}')"],
-    "description": "Saludo personalizado"
+  "Console Log": {
+    "prefix": "clg",
+    "body": ["console.log(${1});"]
   }
 }
 ```
 
-### Tips:
+---
 
-- `${1}` → Posición del cursor
-- `"editor.snippetSuggestions": "top"` → Prioriza snippets
+## 🔢 Variables especiales
+
+| Variable         | Función        |
+| ---------------- | -------------- |
+| `${1}`           | Primer cursor  |
+| `${2}`           | Segundo cursor |
+| `${TM_FILENAME}` | Nombre archivo |
 
 ---
 
 # ⚡ Emmet
 
-Herramienta para escribir HTML y CSS rápidamente mediante abreviaciones.
+Sistema de abreviaciones para HTML y CSS.
 
-## HTML
+---
 
-### Ejemplos:
+## 🏗️ HTML
 
-```
-ul > li * 4 > a
-header > nav > ul > li * 3 > a
-```
-
-### Clases e IDs:
-
-```
-div.container
-div#main
+```txt
+ul>li*5>a
 ```
 
-### Estructuras complejas:
+Resultado:
 
-```
-ul(li>a)\*4
+```html id="0s2ldu"
+<ul>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+  <li><a href=""></a></li>
+</ul>
 ```
 
 ---
 
-## CSS
+## 🎨 CSS
 
-### Ejemplos:
+```txt
+m10
+```
 
-- `m10` → margin: 10px;
-- `p20` → padding: 20px;
+Resultado:
 
-### Unidades:
+```css id="3cl82v"
+margin: 10px;
+```
 
-- `p` → porcentaje
-- `e` → em
+---
+
+# 💻 Terminal integrada
+
+VSCode incluye terminal integrada.
+
+Acceso:
+
+```txt
+Ctrl + `
+```
+
+---
+
+## 🖥️ Terminales compatibles
+
+- PowerShell
+- CMD
+- Bash
+- Zsh
+
+---
+
+# 🧠 IntelliSense
+
+Sistema inteligente basado en:
+
+- Tipado
+- Contexto
+- Extensiones
+- Lenguaje
+
+---
+
+## Compatible con:
+
+- JavaScript
+- TypeScript
+- Python
+- C#
+- Java
+- Go
+- Rust
+
+y básicamente cualquier lenguaje que alguien haya decidido torturar profesionalmente.
 
 ---
 
 # 🤝 Pair Programming
 
-Técnica donde 2 desarrolladores trabajan juntos:
-
-- 👨‍✈️ **Piloto** → Escribe código
-- 🧠 **Copiloto** → Analiza, detecta errores y optimiza
-
-### Ejemplo moderno:
-
-- **GitHub _Copilot_** como asistente inteligente
+Dos desarrolladores trabajando juntos.
 
 ---
 
-# 🧠 Buenas prácticas adicionales
+## Roles
 
-- Usa siempre control de versiones (Git)
-- Organiza tu proyecto por carpetas
-- Nombra archivos de forma clara
-- Mantén consistencia en indentación
-- Instala solo extensiones necesarias (no conviertas VSCode en un monstruo lento)
-- Aprende atajos: ahorran horas de vida
+| Rol         | Función            |
+| ----------- | ------------------ |
+| 👨‍✈️ Piloto   | Escribe código     |
+| 🧠 Copiloto | Analiza y optimiza |
+
+---
+
+## Variante moderna
+
+Uso de asistentes IA como:
+
+- [GitHub Copilot](https://github.com/features/copilot?utm_source=chatgpt.com)
+- [Cursor](https://cursor.com?utm_source=chatgpt.com)
+- [Codeium](https://codeium.com?utm_source=chatgpt.com)
+
+---
+
+# 🧼 Buenas prácticas
+
+## ✅ Haz esto
+
+- Usa Git siempre
+- Aprende atajos
+- Organiza carpetas
+- Mantén consistencia
+- Usa Prettier/ESLint
+- Configura auto guardado
+
+---
+
+## ❌ Evita esto
+
+- Instalar extensiones innecesarias
+- Mezclar tabs y espacios
+- Ignorar errores del linter
+- Trabajar sin control de versiones
+- Guardar archivos como `final_final_ahora_si.js`
+
+La informática está llena de tragedias evitables.
+
+---
+
+# 🏁 Conclusión
+
+VSCode se volvió estándar porque logra un equilibrio extremadamente raro:
+
+- Ligero
+- Potente
+- Flexible
+- Extensible
+- Fácil de usar
+
+No es perfecto. Ninguna herramienta lo es.  
+Pero para desarrollo moderno, pocas ofrecen tanta productividad con tan poca fricción.
+
+Y considerando cómo suele comportarse el software en general, eso ya roza la ingeniería milagrosa.
