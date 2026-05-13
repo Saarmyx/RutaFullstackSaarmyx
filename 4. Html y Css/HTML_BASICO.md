@@ -1,292 +1,913 @@
 # 🌐 HTML Básico
 
-HTML (_HyperText Markup Language_) es el lenguaje que define la **estructura** de una página web.
-No diseña (eso es CSS) ni programa lógica (eso es JavaScript). Organiza el contenido.
+HTML significa:
+
+## HyperText Markup Language
+
+Es el lenguaje que define la **estructura** de una página web.
+
+HTML no:
+
+- Diseña interfaces (CSS)
+- Programa lógica (JavaScript)
+- Maneja bases de datos
+
+HTML organiza contenido.
+
+Piensa en él como el esqueleto de una web.  
+Sin él, tendrías estilos flotando en el vacío y JavaScript intentando manipular la nada. Una metáfora accidentalmente filosófica.
 
 ---
 
-## 📁 Archivos HTML
+# 🧠 ¿Qué hace HTML realmente?
 
-El archivo principal casi siempre se llama:
+HTML le dice al navegador:
 
-```text
+- qué es un título
+- qué es un párrafo
+- qué es una imagen
+- qué es un formulario
+- qué es navegación
+- qué contenido es importante
+
+---
+
+# 📁 Archivos HTML
+
+Normalmente el archivo principal se llama:
+
+```txt
 index.html
-
-index → Es el archivo que los servidores buscan por defecto
-
-.html → Es la extensión del documento
 ```
 
 ---
 
-## 🧱 Etiquetas
+# 🧩 ¿Por qué "index"?
 
-Estructura básica:
+Porque muchos servidores buscan automáticamente un archivo llamado:
 
-```html
+```txt
+index.html
+```
+
+cuando visitas un sitio.
+
+Ejemplo:
+
+```txt
+https://midominio.com/
+```
+
+El servidor suele responder:
+
+```txt
+/index.html
+```
+
+---
+
+# 📄 Extensión `.html`
+
+Indica que el archivo contiene HTML.
+
+---
+
+# 🧱 Etiquetas HTML
+
+HTML funciona mediante etiquetas.
+
+---
+
+# 📦 Estructura básica
+
+```html id="tag01"
 <etiqueta>Contenido</etiqueta>
 ```
 
-Apertura → `<etiqueta>`
+---
 
-Contenido → texto u otras etiquetas
+# 🧩 Partes
 
-Cierre → `</etiqueta>`
-
-## 🔒 Etiquetas autocerradas
-
-No necesitan cierre:
-
-- `<img />`
-- `<input />`
-- `<br />`
+| Parte         | Función     |
+| ------------- | ----------- |
+| `<etiqueta>`  | Apertura    |
+| `Contenido`   | Información |
+| `</etiqueta>` | Cierre      |
 
 ---
 
-## ⚠️ Buenas prácticas
+# 📄 Ejemplo
 
-No usar etiquetas obsoletas (como `<font>`, `<center>`)
-
-### Separar:
-
-- `HTML` → estructura
-- `CSS` → estilos
-- `JS` → lógica
-
-Usar etiquetas semánticas para mejorar SEO y accesibilidad
+```html id="tag02"
+<p>Hola mundo</p>
+```
 
 ---
 
-## 🧠 Estructura básica de HTML
+# 🧠 Anidación
 
-```html
+Las etiquetas pueden contener otras etiquetas.
+
+```html id="tag03"
+<div>
+  <p>Texto</p>
+</div>
+```
+
+---
+
+# ⚠️ Regla importante
+
+Las etiquetas deben cerrarse correctamente.
+
+❌ Incorrecto:
+
+```html id="bad01"
+<div>
+  <p>Texto</p>
+</div>
+```
+
+✅ Correcto:
+
+```html id="good01"
+<div>
+  <p>Texto</p>
+</div>
+```
+
+Los navegadores intentan corregir errores automáticamente.  
+No significa que debas convertir tu HTML en arqueología digital incomprensible.
+
+---
+
+# 🔒 Etiquetas autocerradas
+
+No necesitan cierre tradicional.
+
+---
+
+# 📄 Ejemplos
+
+```html id="self01"
+<img />
+<br />
+<hr />
+<input />
+<meta />
+<link />
+```
+
+---
+
+# 🧠 ¿Por qué?
+
+Porque no contienen contenido interno.
+
+---
+
+# 🧬 Estructura básica de una página HTML
+
+```html id="basic01"
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <title>Mi página</title>
   </head>
+
   <body>
-    Contenido visible
+    <h1>Hola mundo</h1>
   </body>
 </html>
 ```
 
-### Explicación:
+---
 
-- `<!DOCTYPE html>` → Define HTML5
-- `<html>` → Raíz del documento
-- `<head>` → Información no visible
-- `<body>` → Contenido visible
-
-### 🧬 Jerarquía
-
-`HTML` funciona como un árbol:
-
-- `<html>` → padre
-- `<head>` y `<body>` → hijos
-- `<title>` → hijo de `<head>`
+# 🧩 Explicación completa
 
 ---
 
-## 🔠 Encabezados y párrafos
+# `<!DOCTYPE html>`
 
-- `<h1>Título principal</h1>`
-- `<p>Esto es un párrafo</p>`
+Define que el documento usa:
 
-### Niveles:
+## HTML5
 
-- `<h1>` → Principal (solo uno por página)
-- `<h2>` a `<h6>` → Subniveles
+Ayuda al navegador a interpretar correctamente el archivo.
 
 ---
 
-## 📋 Listas
+# `<html>`
 
-### Lista no ordenada:
+Es la raíz del documento.
+
+Todo el contenido HTML vive dentro.
+
+---
+
+# `lang="es"`
+
+Indica idioma principal.
+
+Muy importante para:
+
+- SEO
+- Accesibilidad
+- Lectores de pantalla
+
+---
+
+# `<head>`
+
+Contiene información NO visible directamente.
+
+---
+
+# 🧠 Incluye normalmente
+
+- título
+- metadatos
+- CSS
+- scripts
+- favicon
+- SEO
+
+---
+
+# `<meta charset="UTF-8">`
+
+Define codificación de caracteres.
+
+Permite usar:
+
+- tildes
+- ñ
+- símbolos
+- emojis
+
+Sin UTF-8 algunos textos terminan pareciendo mensajes interceptados de una civilización rota.
+
+---
+
+# `<title>`
+
+Título mostrado en:
+
+- pestaña navegador
+- buscadores
+- favoritos
+
+---
+
+# `<body>`
+
+Contiene todo lo visible.
+
+---
+
+# 🌳 Jerarquía HTML
+
+HTML funciona como árbol.
+
+```txt
+html
+├── head
+│   └── title
+└── body
+    └── h1
+```
+
+---
+
+# 🧠 Relaciones
+
+| Relación | Ejemplo               |
+| -------- | --------------------- |
+| Padre    | `body`                |
+| Hijo     | `h1`                  |
+| Hermano  | `section` y `article` |
+
+---
+
+# 🔠 Encabezados
+
+Definen títulos y jerarquías.
+
+---
+
+# 📄 Niveles
+
+```html id="head01"
+<h1>Título principal</h1>
+<h2>Subtítulo</h2>
+<h3>Sección</h3>
+```
+
+---
+
+# 🧠 Importancia
+
+| Etiqueta | Uso              |
+| -------- | ---------------- |
+| `h1`     | Título principal |
+| `h2`     | Secciones        |
+| `h3-h6`  | Subniveles       |
+
+---
+
+# ⚠️ Buena práctica
+
+Usa solo un:
 
 ```html
+<h1></h1>
+```
+
+por página.
+
+---
+
+# 📄 Párrafos
+
+```html id="p01"
+<p>Esto es un párrafo</p>
+```
+
+---
+
+# 🧠 Párrafos automáticamente agregan:
+
+- márgenes
+- separación
+- estructura textual
+
+---
+
+# 📋 Listas
+
+---
+
+# 🔹 Lista no ordenada
+
+```html id="list01"
 <ul>
-  <li>Elemento</li>
+  <li>HTML</li>
+  <li>CSS</li>
 </ul>
 ```
 
-### Lista ordenada:
+Resultado conceptual:
 
-```html
+- HTML
+- CSS
+
+---
+
+# 🔢 Lista ordenada
+
+```html id="list02"
 <ol>
-  <li>Elemento</li>
+  <li>Paso 1</li>
+  <li>Paso 2</li>
 </ol>
 ```
 
+Resultado conceptual:
+
+1. Paso 1
+2. Paso 2
+
 ---
 
-## 🔗 Enlaces (Anclas)
+# 🧠 Diferencia
 
-```html
+| Etiqueta | Uso              |
+| -------- | ---------------- |
+| `ul`     | Orden no importa |
+| `ol`     | Orden sí importa |
+
+---
+
+# 🔗 Enlaces
+
+Los enlaces conectan páginas.
+
+HTML literalmente nació para esto.
+
+---
+
+# 📄 Ejemplo
+
+```html id="a01"
 <a href="https://google.com">Ir a Google</a>
 ```
 
-### Atributos importantes:
+---
 
-- `href` → destino
-- `target="_blank"` → abre en nueva pestaña
-- `title` → descripción adicional
+# 🧩 Atributos importantes
 
-### Ejemplo completo:
+| Atributo | Función           |
+| -------- | ----------------- |
+| `href`   | Destino           |
+| `target` | Cómo abrir        |
+| `title`  | Información extra |
 
-```html
-<a href="https://google.com" target="_blank" title="Buscar en Google"> Google </a>
+---
+
+# 🌐 Nueva pestaña
+
+```html id="a02"
+<a href="https://google.com" target="_blank"> Google </a>
 ```
 
 ---
 
-## 🖼️ Imágenes
+# ⚠️ Seguridad importante
+
+Cuando uses:
 
 ```html
-<img src="imagen.png" alt="Descripción de la imagen" />
+target="_blank"
 ```
 
-- `src` → ruta
-- `alt` → accesibilidad y SEO
+agrega:
+
+```html
+rel="noopener noreferrer"
+```
+
+Ejemplo:
+
+```html id="a03"
+<a href="https://google.com" target="_blank" rel="noopener noreferrer"> Google </a>
+```
 
 ---
 
-## 🧭 Rutas
+# 🖼️ Imágenes
 
-### Absolutas
+```html id="img01"
+<img src="imagen.png" alt="Descripción" />
+```
 
-- `https://youtube.com`
+---
 
-### Relativas
+# 🧩 Atributos
 
-```bash
+| Atributo | Función           |
+| -------- | ----------------- |
+| `src`    | Ruta imagen       |
+| `alt`    | Texto alternativo |
+
+---
+
+# 🧠 ¿Por qué `alt` es tan importante?
+
+Ayuda a:
+
+- accesibilidad
+- SEO
+- lectores pantalla
+- errores carga
+
+---
+
+# ❌ Mal ejemplo
+
+```html id="imgbad"
+<img src="foto.png" />
+```
+
+---
+
+# ✅ Buen ejemplo
+
+```html id="imggood"
+<img src="foto.png" alt="Persona usando laptop" />
+```
+
+---
+
+# 🧭 Rutas
+
+Las rutas indican ubicación archivos.
+
+---
+
+# 🌍 Absolutas
+
+```txt
+https://youtube.com
+```
+
+---
+
+# 📂 Relativas
+
+```txt
 ./archivo.html
-../archivo.html
-carpeta/archivo.js
+../styles/main.css
+/assets/img/logo.png
 ```
 
-- `./` → misma carpeta
-- `../` → carpeta anterior
+---
+
+# 🧠 Explicación
+
+| Ruta  | Significado      |
+| ----- | ---------------- |
+| `./`  | Carpeta actual   |
+| `../` | Carpeta anterior |
+| `/`   | Raíz proyecto    |
 
 ---
 
-## 🧾 Formularios
+# 🧾 Formularios
 
-```html
+Permiten enviar información.
+
+---
+
+# 📄 Ejemplo básico
+
+```html id="form01"
 <form>
-  <input type="text" name="username" placeholder="Saarmyx" required />
-</form>
-```
-
-### Tipos de input:
-
-- `text`
-- `password`
-- `email`
-- `number`
-- `date`
-- `file`
-- `checkbox`
-- `radio`
-- `submit`
-- `color`
-
----
-
-### Atributos importantes:
-
-- `required` → obligatorio
-- `name` → nombre del campo
-- `placeholder` → texto guía
-- `value` → valor por defecto
-
----
-
-### 🧠 Inputs más completos
-
-```html
-<form>
-  <label for="user">Usuario:</label>
-  <input id="user" type="text" name="username" required />
-
-  <label for="pass">Contraseña:</label>
-  <input id="pass" type="password" name="password" required />
-
-  <input type="submit" value="Enviar" />
+  <input type="text" />
 </form>
 ```
 
 ---
 
-## 🧩 Etiquetas semánticas (MUY importantes)
+# 🧩 Inputs comunes
 
-Ayudan al SEO y a la estructura:
-
-- `<header></header>`
-- `<nav></nav>`
-- `<main></main>`
-- `<section></section>`
-- `<article></article>`
-- `<aside></aside>`
-- `<footer></footer>`
+| Tipo       | Función      |
+| ---------- | ------------ |
+| `text`     | Texto        |
+| `password` | Contraseña   |
+| `email`    | Correo       |
+| `number`   | Números      |
+| `date`     | Fecha        |
+| `checkbox` | Casilla      |
+| `radio`    | Opción única |
+| `file`     | Archivos     |
 
 ---
 
-## 🧠 Comentarios
+# 🧠 Ejemplo completo
 
-```html
+```html id="form02"
+<form>
+  <label for="user">Usuario</label>
+
+  <input id="user" type="text" name="username" placeholder="Saarmyx" required />
+
+  <button type="submit">Enviar</button>
+</form>
+```
+
+---
+
+# 🧩 Atributos importantes
+
+| Atributo      | Función       |
+| ------------- | ------------- |
+| `required`    | Obligatorio   |
+| `placeholder` | Texto guía    |
+| `name`        | Nombre dato   |
+| `value`       | Valor inicial |
+| `id`          | Identificador |
+
+---
+
+# 🏷️ Labels
+
+Relacionan texto con inputs.
+
+Muy importantes para accesibilidad.
+
+---
+
+# 📄 Ejemplo
+
+```html id="label01"
+<label for="email">Correo</label>
+
+<input id="email" type="email" />
+```
+
+---
+
+# 🧩 Botones
+
+```html id="btn01"
+<button>Click</button>
+```
+
+---
+
+# 🧠 Tipos comunes
+
+| Tipo     | Función             |
+| -------- | ------------------- |
+| `button` | Botón normal        |
+| `submit` | Envía formulario    |
+| `reset`  | Reinicia formulario |
+
+---
+
+# 🧩 Etiquetas semánticas
+
+HTML5 introdujo etiquetas con significado estructural.
+
+---
+
+# 📄 Principales
+
+```html id="semantic01"
+<header></header>
+<nav></nav>
+<main></main>
+<section></section>
+<article></article>
+<aside></aside>
+<footer></footer>
+```
+
+---
+
+# 🧠 ¿Por qué importan?
+
+Mejoran:
+
+- SEO
+- accesibilidad
+- organización
+- comprensión código
+
+---
+
+# 🏗️ Ejemplo estructural
+
+```html id="semantic02"
+<body>
+  <header>Logo y navegación</header>
+
+  <main>
+    <section>Contenido principal</section>
+
+    <aside>Barra lateral</aside>
+  </main>
+
+  <footer>Información final</footer>
+</body>
+```
+
+---
+
+# 🧠 Comentarios
+
+```html id="comment01"
 <!-- Esto es un comentario -->
 ```
 
 ---
 
-## ⚡ Extras útiles
-
-- Saltos de línea
-  - `<br />`
-
-- Línea horizontal
-  - `<hr />`
+# ⚡ Extras útiles
 
 ---
 
-## 🧠 Buenas prácticas clave
+# 🔹 Salto línea
 
-- Usa solo un `<h1>` por página
-- Siempre incluye alt en imágenes
-- Usa etiquetas semánticas
-- Mantén código limpio y ordenado
-- Evita estilos en HTML `(style="")`
-- Nombres claros en archivos y variables
+```html id="br01"
+<br />
+```
 
 ---
 
-## 🧩 Ejemplo completo
+# 🔹 Línea horizontal
+
+```html id="hr01"
+<hr />
+```
+
+---
+
+# 🔹 Texto importante
+
+```html id="strong01"
+<strong>Importante</strong>
+```
+
+---
+
+# 🔹 Énfasis
+
+```html id="em01"
+<em>Énfasis</em>
+```
+
+---
+
+# 🧠 Diferencia importante
+
+| Etiqueta | Significado           |
+| -------- | --------------------- |
+| `b`      | Visual                |
+| `strong` | Importancia semántica |
+| `i`      | Visual                |
+| `em`     | Énfasis semántico     |
+
+---
+
+# 📦 Divs y spans
+
+---
+
+# 🔲 `div`
+
+Contenedor en bloque.
+
+```html id="div01"
+<div>Contenido</div>
+```
+
+---
+
+# 🔹 `span`
+
+Contenedor en línea.
+
+```html id="span01"
+<span>Texto</span>
+```
+
+---
+
+# ⚠️ Error común
+
+Usar `div` para TODO.
+
+HTML semántico existe por algo.
+
+---
+
+# 🧠 Meta tags importantes
+
+---
+
+# 📱 Responsive
+
+```html id="meta01"
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+Fundamental para móviles.
+
+---
+
+# 🔍 SEO básico
+
+```html id="meta02"
+<meta name="description" content="Mi sitio web" />
+```
+
+---
+
+# 🌐 Integrar CSS
+
+```html id="csslink01"
+<link rel="stylesheet" href="styles.css" />
+```
+
+---
+
+# ⚡ Integrar JavaScript
+
+```html id="jslink01"
+<script src="app.js"></script>
+```
+
+---
+
+# 🧠 ¿Dónde poner `<script>`?
+
+Normalmente antes de:
 
 ```html
+</body>
+```
+
+para mejorar carga.
+
+---
+
+# 🧪 DevTools
+
+Herramientas desarrollador navegador.
+
+Acceso común:
+
+```txt
+F12
+```
+
+---
+
+# 🧩 Permiten
+
+- inspeccionar HTML
+- editar CSS
+- depurar JS
+- analizar rendimiento
+
+---
+
+# 🧠 Buenas prácticas
+
+## ✅ Haz esto
+
+- Usa HTML semántico
+- Mantén indentación limpia
+- Usa `alt`
+- Usa `label`
+- Usa nombres claros
+- Organiza estructura
+
+---
+
+## ❌ Evita esto
+
+- Usar estilos inline
+- Abusar divs
+- Saltarte jerarquías
+- Hacer HTML ilegible
+- Copiar código sin entenderlo
+
+La web ya tiene suficiente código traumático heredado de 2009. No contribuyas al ecosistema del horror.
+
+---
+
+# 🏁 Ejemplo completo moderno
+
+```html id="finalhtml01"
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Mi primera web</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="description" content="Mi primera página web" />
+
+    <title>Mi sitio</title>
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <header>
       <h1>Bienvenido</h1>
+
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/about.html">Acerca</a>
+      </nav>
     </header>
 
     <main>
-      <p>Esta es mi primera página web</p>
+      <section>
+        <h2>Contenido principal</h2>
 
-      <a href="https://google.com" target="_blank">Buscar</a>
+        <p>Mi primera web moderna.</p>
 
-      <img src="imagen.png" alt="Imagen de ejemplo" />
+        <img src="img/photo.png" alt="Imagen ejemplo" />
+      </section>
     </main>
 
     <footer>
       <p>© 2026</p>
     </footer>
+
+    <script src="app.js"></script>
   </body>
 </html>
 ```
+
+---
+
+# 🚀 Conclusión
+
+HTML es la base absoluta de la web.
+
+Todo framework moderno termina generando HTML:
+
+- React
+- Vue
+- Angular
+- Next.js
+
+Todos.
+
+Por eso aprender HTML correctamente no es opcional.  
+Es entender el lenguaje nativo del navegador antes de intentar domesticar capas de abstracción encima.

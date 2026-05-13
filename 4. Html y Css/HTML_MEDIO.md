@@ -1,223 +1,891 @@
-# HTML Intermedio
+# 🌐 HTML Intermedio
 
-## Comentarios, meta tags y favicon
+Cuando entiendes HTML básico, dejas de “poner etiquetas” y empiezas a construir documentos web reales.
 
-Los comentarios son lineas de cogidos que no lee el programa, solo el desarrollador
+Aquí es donde HTML deja de ser:
 
+```txt
+"h1 + p + img"
+```
+
+y empieza a convertirse en:
+
+- estructura profesional
+- accesibilidad
+- SEO
+- formularios reales
+- multimedia
+- semántica
+- optimización
+
+Porque sí, eventualmente descubrirás que hacer una web no era solo centrar un div durante tres horas.
+
+---
+
+# 🧠 Comentarios HTML
+
+Los comentarios son fragmentos que:
+
+- el navegador ignora
+- el usuario no ve
+- sirven para desarrolladores
+
+---
+
+# 📄 Sintaxis
+
+```html id="comment01"
 <!-- Esto es un comentario -->
-
-Un favicon es el icono que aparece en la parte de la pestaña, se añade en el head de la siguiente manera
-
-`<link rel="icon" href="icono.png" type="image/png">`
-
-Se recomienta poner el type para la compatibilidad
-
-Las meta tags son etiquetas que el navegador solo lee y no muestra
-
-El atributo lang en html se usa para definir el idioma base de nuestra web
-
-El utf-8 se usa para la compatibilidad en los acentos de todo el mundo
-
-el meta viewport, nos ayuda a que se adapta a todos los dispositivos y
-
-Tenemos el
-
-- meta description que describe nuestra webs
-- meta keyword estas son las palabras claves
-- meta autor define el nombre del autor
-- meta robots para que muestre o no muestre un fragmento de nuestra pagina y lo muestre o tambien para que google guarde o no guarde cache de nuestra web, tambien para que no se indece nuestra img
-
-- meta title es para el titulo de la web, no se usa tanto
-
-- Tambien tenemos los meta OG:title,img,description , url que son los mas comunes y nos ayuda con lo que se muestra para eso nos puede ayudar una pagina web para crearlo de manera automatica
-
-# Text Area
-
-La propiedad max-w/h hace que no se pueda agrandar en base al valor que nosotros le demos
-
-Text area es un propiedad que nos ayuda a que el usuario escriba un texto mas amplio
-
-HTML
-
-```html
-<div class="form_input">
-  <textarea></textarea>
-</div>
 ```
 
-El text area aunque se le ponga un width no se pondra para eso tendremos que usar o minwidth o resize (mas usada)
+---
 
-ademas de que deberemos agregarle una tipografia al text area, ya que tengra una tipografia
+# 🧠 Usos comunes
 
-y la propiedad form-sizing hace que se adapte a lo que nosotros escribamos
+- documentar código
+- separar secciones
+- dejar notas
+- desactivar temporalmente elementos
 
-el atritbuto readonly, solo nos deja ver no escribir aunque pongamos esto hara un focus y lo que tenga dentro se enviara
+---
 
-en cambio con disable nos desabilitara
+# ⚠️ Mala práctica
 
-tambien con minleght es para que puedas escribir hasta los caracteres que especifiques
+No abuses comentarios inútiles.
 
-y con el atributo row, podemos especificar cuantas columnas escribira el usuario
-
-# Labels
-
-Es la forma que tenemos de etiquetar un input
+❌ Horrible:
 
 ```html
-<div class="form_input">
-  <label>Nombre</label>
-  <input type="name" />
-</div>
+<!-- Este es un párrafo -->
+<p>Hola</p>
 ```
 
-Se puede abarcar de 2 maneras, con for en label y id en input o abarcando todo el input con nuestro label
+Si necesitas explicar cada línea trivial, probablemente el código ya está gritando por ayuda estructural.
 
-# Selects, datalist y options
+---
 
-los selects son una especie de lista que ya definimos y quue el usuario elige
+# 🧩 Meta Tags
+
+Las meta tags son etiquetas especiales dentro de:
 
 ```html
-<select name="type-of-user">
-  <option value="user1">Opcion 1</option>
-  <option value="user2">Opcion 2</option>
-  <option value="user3">Opcion 3</option>
+<head></head>
+```
+
+El usuario normalmente no las ve directamente.
+
+Pero:
+
+- navegadores
+- buscadores
+- redes sociales
+- sistemas accesibilidad
+
+sí las leen.
+
+---
+
+# 📄 Ejemplo básico
+
+```html id="meta01"
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+```
+
+---
+
+# 🌍 `lang`
+
+Define idioma principal sitio.
+
+```html id="lang01"
+<html lang="es"></html>
+```
+
+---
+
+# 🧠 Importancia
+
+Ayuda a:
+
+- SEO
+- lectores pantalla
+- traducción automática
+- accesibilidad
+
+---
+
+# 🔤 `charset="UTF-8"`
+
+```html id="utf01"
+<meta charset="UTF-8" />
+```
+
+Permite usar correctamente:
+
+- ñ
+- tildes
+- emojis
+- caracteres especiales
+
+Sin UTF-8 algunos textos parecen mensajes corruptos enviados desde otra dimensión digital.
+
+---
+
+# 📱 Meta Viewport
+
+Fundamental responsive design.
+
+```html id="viewport01"
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+```
+
+---
+
+# 🧠 ¿Qué hace?
+
+Hace que la web:
+
+- se adapte móviles
+- use ancho dispositivo
+- no aparezca miniatura absurda en celulares
+
+---
+
+# 🔍 Meta Description
+
+Describe la página.
+
+```html id="description01"
+<meta name="description" content="Curso de HTML intermedio" />
+```
+
+---
+
+# 🧠 Importancia
+
+Puede aparecer en Google.
+
+Afecta:
+
+- SEO
+- clics
+- visibilidad
+
+---
+
+# 🏷️ Meta Keywords
+
+```html id="keywords01"
+<meta name="keywords" content="HTML, CSS, web" />
+```
+
+---
+
+# ⚠️ Importante
+
+Actualmente Google casi no usa keywords.
+
+Históricamente la gente abusó tanto del sistema que terminó siendo inútil. Un clásico humano.
+
+---
+
+# 👤 Meta Author
+
+```html id="author01"
+<meta name="author" content="Santiago" />
+```
+
+Define autor documento.
+
+---
+
+# 🤖 Meta Robots
+
+Controla indexación buscadores.
+
+```html id="robots01"
+<meta name="robots" content="index, follow" />
+```
+
+---
+
+# 🧩 Valores comunes
+
+| Valor      | Función           |
+| ---------- | ----------------- |
+| `index`    | Permite indexar   |
+| `noindex`  | No indexar        |
+| `follow`   | Seguir enlaces    |
+| `nofollow` | No seguir enlaces |
+
+---
+
+# 🖼️ Open Graph (OG)
+
+Controla cómo se comparte la web.
+
+Muy usado en:
+
+- WhatsApp
+- Discord
+- Facebook
+- LinkedIn
+
+---
+
+# 📄 Ejemplo
+
+```html id="og01"
+<meta property="og:title" content="Mi web" />
+
+<meta property="og:description" content="Curso moderno HTML" />
+
+<meta property="og:image" content="img/banner.png" />
+
+<meta property="og:url" content="https://miweb.com" />
+```
+
+---
+
+# 🧠 Resultado
+
+Define:
+
+- título compartido
+- imagen previa
+- descripción
+- enlace
+
+---
+
+# 🎨 Favicon
+
+Icono pestaña navegador.
+
+---
+
+# 📄 Ejemplo
+
+```html id="favicon01"
+<link rel="icon" href="favicon.png" type="image/png" />
+```
+
+---
+
+# 🧠 Buena práctica
+
+Usa:
+
+- `.png`
+- `.ico`
+- tamaños pequeños
+
+---
+
+# ✍️ Textarea
+
+Permite escribir texto largo.
+
+---
+
+# 📄 Ejemplo
+
+```html id="textarea01"
+<textarea></textarea>
+```
+
+---
+
+# 🧩 Uso típico
+
+- comentarios
+- mensajes
+- descripciones
+- formularios largos
+
+---
+
+# 📏 Rows y Cols
+
+```html id="textarea02"
+<textarea rows="5" cols="30"></textarea>
+```
+
+---
+
+# 🧠 Significado
+
+| Atributo | Función            |
+| -------- | ------------------ |
+| `rows`   | Altura visible     |
+| `cols`   | Anchura caracteres |
+
+---
+
+# 🔒 Readonly
+
+Solo lectura.
+
+```html id="readonly01"
+<textarea readonly>
+Texto bloqueado
+</textarea>
+```
+
+---
+
+# ⚠️ Diferencia importante
+
+## `readonly`
+
+- se puede seleccionar
+- sí se envía formulario
+
+---
+
+## `disabled`
+
+- deshabilitado
+- NO se envía
+
+```html id="disabled01"
+<textarea disabled>
+Bloqueado
+</textarea>
+```
+
+---
+
+# 📏 Resize
+
+Controla redimensionamiento.
+
+```css id="resize01"
+textarea {
+  resize: none;
+}
+```
+
+---
+
+# 🧠 Valores comunes
+
+| Valor        | Función         |
+| ------------ | --------------- |
+| `none`       | Desactiva       |
+| `vertical`   | Solo vertical   |
+| `horizontal` | Solo horizontal |
+
+---
+
+# ⚡ `maxlength` y `minlength`
+
+```html id="length01"
+<textarea minlength="10" maxlength="100"></textarea>
+```
+
+---
+
+# 🏷️ Labels
+
+Relacionan texto con inputs.
+
+---
+
+# ✅ Forma correcta
+
+```html id="label01"
+<label for="user"> Usuario </label>
+
+<input id="user" type="text" />
+```
+
+---
+
+# 🧠 Beneficios
+
+- accesibilidad
+- mejor UX
+- clic más cómodo
+
+---
+
+# 🧩 Alternativa válida
+
+```html id="label02"
+<label>
+  Usuario
+  <input type="text" />
+</label>
+```
+
+---
+
+# 📋 Selects
+
+Listas desplegables.
+
+---
+
+# 📄 Ejemplo
+
+```html id="select01"
+<select name="user-type">
+  <option value="admin">Admin</option>
+
+  <option value="user">Usuario</option>
 </select>
 ```
 
-El select se puede estilizar de la misma manera que un input, pero el option se estiliza aparte y no se puede dar mucha personalizacion por defecto
+---
 
-En las datalist nos podemos ahorrar el value, aunque es mejor ponerlo porque es el valor que se envia
+# 🧠 Importante
 
-```html
-<input list="user" name="user" />
-<datalist id="user" name="type-of-user">
-  <option value="user1">Opcion 1</option>
-  <option value="user2">Opcion 2</option>
-  <option value="user3">Opcion 3</option>
+## `value`
+
+Es lo que realmente se envía.
+
+---
+
+# 🔍 Datalist
+
+Input con sugerencias.
+
+---
+
+# 📄 Ejemplo
+
+```html id="datalist01"
+<input list="users" />
+
+<datalist id="users">
+  <option value="Santiago"></option>
+
+  <option value="Rosie"></option>
 </datalist>
 ```
 
-# Fielset y Legend
+---
 
-Estos se usan para enumerar y etiquetar un form
+# 🧠 Diferencia
 
-Si tenemos un input base, podemos agrupar el tipo de dato que se pide
+| Elemento   | Función                |
+| ---------- | ---------------------- |
+| `select`   | Opciones cerradas      |
+| `datalist` | Usuario puede escribir |
 
-```html
+---
+
+# 🧱 Fieldset y Legend
+
+Agrupan formularios.
+
+---
+
+# 📄 Ejemplo
+
+```html id="fieldset01"
 <fieldset>
-  <legend>
-    <input type="email" />
-  </legend>
+  <legend>Información usuario</legend>
+
+  <input type="email" />
 </fieldset>
 ```
 
-# Details y summeries
+---
 
-Estos proporcinan una manera nativa de hacer una lista deplegable
+# 🧠 Beneficios
 
-```html
+- organización
+- accesibilidad
+- agrupación lógica
+
+---
+
+# 📂 Details y Summary
+
+Dropdown nativo HTML.
+
+---
+
+# 📄 Ejemplo
+
+```html id="details01"
 <details>
-  <summary>A tu mama le encanta</summary>
-  <ul>
-    Ver videos
-  </ul>
+  <summary>Ver más</summary>
+
+  <p>Contenido oculto</p>
 </details>
 ```
 
-y se puede editar de muchas maneras, una es
+---
 
-datails[open] y esto quiere que decir que editamos cuando se abra el menu
+# 🧠 Ventajas
 
-# Enlaces (avazandos)
+- accesible
+- sin JavaScript
+- nativo navegador
 
-Para ir a una seccion en especifico mediante un enlace, lo podemos hacer con un id que debe ser igual a donde nosotros queremos ir
+---
 
-ejemplo
+# 🎨 Estado abierto
 
-```html
-<a href="hola"></a>
-
-<h1 id="hola"></h1>
+```css id="detailscss01"
+details[open] {
+  background: #eee;
+}
 ```
 
-Para descar el archivo que nosotros queremos podemos crear un enlace con el atributo **download** y listo
+---
 
-```html
-<a id="archivo.html" download></a>
+# 🔗 Enlaces avanzados
+
+---
+
+# 📍 Anclas internas
+
+Permiten navegar secciones.
+
+---
+
+# 📄 Ejemplo correcto
+
+```html id="anchor01"
+<a href="#contacto"> Ir contacto </a>
+
+<section id="contacto">Contacto</section>
 ```
 
-Con el rel="noopener", rel="noferrer" nos ayuda a que el target blank no de datos que nos pueda hacer fishing, ni nada parecido
+---
 
-rel="nofollow", ayuda a no indexar nuestra web
+# ⚠️ Importante
 
-Tambien podemos "mandar un mail", con mailto:correo@gmail.com o tel:12345678
+Debe incluir:
 
-# Tablas
+```txt
+#
+```
 
-Es una manera de organizar informacion a modo de columnas o filas
+en `href`.
 
+---
+
+# 📥 Descargar archivos
+
+```html id="download01"
+<a href="archivo.pdf" download> Descargar PDF </a>
+```
+
+---
+
+# 📧 Enviar email
+
+```html id="mailto01"
+<a href="mailto:correo@gmail.com"> Enviar correo </a>
+```
+
+---
+
+# 📞 Llamadas telefónicas
+
+```html id="tel01"
+<a href="tel:+573001234567"> Llamar </a>
+```
+
+---
+
+# 🔒 Seguridad target blank
+
+---
+
+# ❌ Incorrecto
+
+```html
+<a href="https://google.com" target="_blank"></a>
+```
+
+---
+
+# ✅ Correcto
+
+```html id="security01"
+<a href="https://google.com" target="_blank" rel="noopener noreferrer"></a>
+```
+
+---
+
+# 🧠 ¿Por qué?
+
+Evita:
+
+- acceso peligroso ventana original
+- phishing
+- manipulación navegador
+
+---
+
+# 📊 Tablas
+
+Organizan información filas/columnas.
+
+---
+
+# 🧱 Estructura
+
+```html id="table01"
 <table>
-<th> arma un encabezado por columna
-<tr> arma una columna
-<td> arma una fila
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+    </tr>
+  </thead>
 
-<thead> Arma todo el encabezado
-
-<tbody> Arma el cuerpo de todo el contenido
-
-<tfoot> Arma el pie de la tabla
-
-# Audio y video
-
-Para reproducir video se necesita el autoplay, esto hace que se autoreproduce y controls nos permite ver controles del video y muted para poder hacer una reproduccion automaticamente muteada y con loop hace que el video se reproduzca en bucle
-
-```html
-<video controls loop auto play src="url del video">Tu navegar no soporta video</video>
+  <tbody>
+    <tr>
+      <td>Santiago</td>
+      <td>18</td>
+    </tr>
+  </tbody>
+</table>
 ```
 
-y pasa lo mismo con el audio
+---
 
-```html
-<audio controls loop auto play src="url del video">Tu navegar no soporta video</audio>
+# 🧩 Etiquetas importantes
+
+| Etiqueta | Función          |
+| -------- | ---------------- |
+| `table`  | Tabla            |
+| `tr`     | Fila             |
+| `th`     | Encabezado       |
+| `td`     | Celda            |
+| `thead`  | Encabezado tabla |
+| `tbody`  | Cuerpo           |
+| `tfoot`  | Pie tabla        |
+
+---
+
+# 🎥 Video
+
+---
+
+# 📄 Ejemplo
+
+```html id="video01"
+<video controls autoplay muted loop src="video.mp4">Tu navegador no soporta video</video>
 ```
 
-Para poner subtitulos lo hacemos de esta manera, default hace que los subtitulos esten por defectos, kind ?, srclang hace que el navegador sepa el idioma del subtitulo, label para poner el nombre en el apartado de subtitulos
+---
 
-```html
-<track src="url de subtitulos" default kind="captions" srclang="es" label="Español" />
+# 🧩 Atributos
+
+| Atributo   | Función                 |
+| ---------- | ----------------------- |
+| `controls` | Controles               |
+| `autoplay` | Reproducción automática |
+| `muted`    | Silenciado              |
+| `loop`     | Repetición              |
+
+---
+
+# ⚠️ Importante
+
+Muchos navegadores SOLO permiten autoplay si el video está muted.
+
+---
+
+# 🔊 Audio
+
+```html id="audio01"
+<audio controls loop src="audio.mp3">Tu navegador no soporta audio</audio>
 ```
 
-# Carga diferida
+---
 
-Es un concepto que la web se debe cargar mediante el usurio scrollee
+# 📝 Subtítulos
 
-Con el loading="lazy", ayuda a que se cargen mas abajo algunos
+```html id="track01"
+<track src="subtitulos.vtt" kind="captions" srclang="es" label="Español" default />
+```
 
-# Html obsoleto
+---
 
-La mayoria son sobre estilo
+# 🧩 Atributos importantes
 
-Una etiqueta puede ser font, center,blink,big, strike(remplazado por del o s),tt(Remplazado por code),u (no esta obsoleta, pero no se recomienda)
+| Atributo  | Función          |
+| --------- | ---------------- |
+| `kind`    | Tipo subtítulo   |
+| `srclang` | Idioma           |
+| `label`   | Nombre visible   |
+| `default` | Activado defecto |
 
-Etiqueta b(remplazo strong),em
+---
 
-# Html Semantico
+# ⚡ Carga diferida (Lazy Loading)
 
-Significa usar etiquetas hechas para un proposito
+Optimización carga imágenes.
 
-- header = Encabezado
-- nav = navegacion
-- section = seccion
-- main = contenido principal de la web
-- aside = seccion secundaria
-- footer = pie de pagina
+---
 
-# Accesibilidad Web
+# 📄 Ejemplo
 
-Esto nos dice que debemos hacerla accesible para todo tipo de personas
+```html id="lazy01"
+<img src="foto.jpg" loading="lazy" alt="Paisaje" />
+```
 
-La ruta base es
+---
 
-html->chrome->web
+# 🧠 Beneficios
 
-Aunque realemnte antes de la web se crea un Dom y para gente que tenga alguna discapacidad, se crea el mismo dom pero antes de ver la web, pasa por un programa de accesibilidad
+- menos consumo
+- carga rápida
+- mejor rendimiento
+
+Las páginas modernas intentan no descargar 400 imágenes innecesarias apenas entras. Una idea revolucionaria para algunos sitios, aparentemente.
+
+---
+
+# ☠️ HTML Obsoleto
+
+Etiquetas antiguas que NO debes usar.
+
+---
+
+# ❌ Obsoletas
+
+```html
+<font>
+  <center>
+    <big> <blink></blink></big></center
+></font>
+```
+
+---
+
+# ✅ Reemplazos modernos
+
+| Obsoleto | Moderno     |
+| -------- | ----------- |
+| `font`   | CSS         |
+| `center` | CSS         |
+| `big`    | CSS         |
+| `strike` | `del` o CSS |
+
+---
+
+# 🧠 HTML Semántico
+
+Usar etiquetas según propósito.
+
+---
+
+# 📄 Ejemplo
+
+```html id="semantic01"
+<header></header>
+<nav></nav>
+<main></main>
+<section></section>
+<article></article>
+<aside></aside>
+<footer></footer>
+```
+
+---
+
+# 🧠 Beneficios
+
+- SEO
+- accesibilidad
+- mejor estructura
+- mantenimiento
+
+---
+
+# ♿ Accesibilidad Web
+
+Crear sitios utilizables por TODOS.
+
+Incluyendo personas con:
+
+- discapacidad visual
+- motora
+- auditiva
+- cognitiva
+
+---
+
+# 🧠 Cómo funciona realmente
+
+El navegador construye:
+
+# DOM
+
+```txt
+HTML → DOM → Renderizado visual
+```
+
+---
+
+# 🧩 Tecnologías accesibilidad
+
+Lectores pantalla interpretan DOM.
+
+No “ven” diseño como humanos.
+
+Por eso:
+
+- semántica importa
+- labels importan
+- alt importa
+- estructura importa
+
+---
+
+# 🧠 Buenas prácticas accesibilidad
+
+## ✅ Haz esto
+
+- Usa `alt`
+- Usa `label`
+- Usa semántica
+- Usa buen contraste
+- Usa encabezados ordenados
+
+---
+
+## ❌ Evita esto
+
+- divs para todo
+- texto sin contraste
+- botones sin texto
+- inputs sin label
+
+---
+
+# 🏁 Conclusión
+
+HTML intermedio es donde empiezas a entender que la web no solo “se ve”.
+
+También debe:
+
+- funcionar
+- ser accesible
+- indexarse
+- optimizarse
+- mantenerse
+
+Porque construir páginas modernas implica pensar en:
+
+- usuarios
+- navegadores
+- buscadores
+- rendimiento
+- accesibilidad
+
+Y tristemente también en Internet Explorer heredado en alguna oficina gubernamental olvidada por el tiempo.

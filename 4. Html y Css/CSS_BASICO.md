@@ -1,60 +1,58 @@
 # 🎨 CSS Básico
 
-CSS (_Cascading Style Sheets_) es el lenguaje que usamos para dar **estilo y diseño** a los elementos HTML.
+CSS significa:
 
-HTML estructura → CSS diseña
+## Cascading Style Sheets
 
----
+Es el lenguaje encargado de:
 
-## 🔗 Cómo integrar CSS
+- diseño
+- apariencia
+- layout
+- animaciones
+- responsive design
 
-### 1. ❌ Estilos en línea (NO recomendado)
+HTML estructura.  
+CSS convierte esa estructura en algo visualmente usable.
 
-```html
-<p style="color: red;">Texto rojo</p>
-```
-
-Problema: Mezcla HTML con CSS Difícil de mantener Nada escalable
-
----
-
-### 2. ⚠️ Etiqueta
-
-```css
-<style>
-  <style > p {
-    color: red;
-  }
-</style>
-```
-
-Mejor que [inline](#1--estilos-en-línea-no-recomendado), pero: Sigue mezclando lenguajes
-
-Poco práctico en proyectos grandes
+Sin CSS, internet se vería como documentos legales abandonados en una terminal gubernamental de 1998.
 
 ---
 
-### 3. ✅ Archivo externo (RECOMENDADO)
+# 🧠 ¿Qué hace CSS?
 
-```html
-<link rel="stylesheet" href="style.css" />
-```
+CSS controla:
 
-Ventajas: Código limpio Reutilizable Escalable
+- colores
+- tamaños
+- márgenes
+- tipografías
+- posiciones
+- sombras
+- animaciones
+- responsive design
 
 ---
 
-## 🧱 Estructura de CSS
+# ⚙️ Cómo funciona CSS
 
-```css
+CSS selecciona elementos HTML y les aplica estilos.
+
+---
+
+# 📄 Sintaxis básica
+
+```css id="csssyntax01"
 selector {
   propiedad: valor;
 }
 ```
 
-### Ejemplo:
+---
 
-```css
+# 📦 Ejemplo
+
+```css id="csssyntax02"
 p {
   color: blue;
 }
@@ -62,78 +60,325 @@ p {
 
 ---
 
-### 🎯 Selectores
+# 🧩 Partes
 
-#### 1. Por etiqueta
+| Parte   | Función   |
+| ------- | --------- |
+| `p`     | Selector  |
+| `color` | Propiedad |
+| `blue`  | Valor     |
 
-```css
-li {
-  color: red;
-}
+---
+
+# 🔗 Cómo integrar CSS
+
+---
+
+# ❌ 1. Inline CSS
+
+CSS directamente dentro del HTML.
+
+```html id="inline01"
+<p style="color: red;">Texto rojo</p>
 ```
 
 ---
 
-#### 2. Por clase
+# ⚠️ Problemas
+
+- Mezcla responsabilidades
+- Difícil mantenimiento
+- Nada escalable
+- Código desordenado
+
+---
+
+# ⚠️ 2. Etiqueta `<style>`
+
+CSS dentro del HTML.
+
+```html id="style01"
+<style>
+  p {
+    color: red;
+  }
+</style>
+```
+
+---
+
+# 🧠 Cuándo usarlo
+
+Útil para:
+
+- pruebas rápidas
+- demos pequeñas
+
+No ideal para proyectos reales.
+
+---
+
+# ✅ 3. Archivo externo
+
+Método recomendado.
+
+```html id="link01"
+<link rel="stylesheet" href="style.css" />
+```
+
+---
+
+# 🧠 Ventajas
+
+- Código limpio
+- Reutilizable
+- Escalable
+- Mejor mantenimiento
+
+---
+
+# 🎯 Selectores
+
+Los selectores indican QUÉ elemento estilizar.
+
+---
+
+# 🔹 Selector por etiqueta
+
+```css id="sel01"
+p {
+  color: blue;
+}
+```
+
+Aplica a TODOS los:
+
+```html
+<p></p>
+```
+
+---
+
+# 🔹 Selector por clase
 
 HTML:
 
-```html
-<li class="ingrediente-faltante">Harina</li>
+```html id="classhtml01"
+<p class="texto">Hola</p>
 ```
 
 CSS:
 
-```css
-.ingrediente-faltante {
+```css id="classcss01"
+.texto {
   color: red;
 }
 ```
 
 ---
 
-#### 3. Por ID HTML:
+# 🧠 El punto (`.`)
 
-```html
-<li id="ingrediente-secreto">Aceite</li>
+Indica clase.
+
+```css
+.clase
+```
+
+---
+
+# 🔹 Selector por ID
+
+HTML:
+
+```html id="idhtml01"
+<p id="titulo">Hola</p>
 ```
 
 CSS:
 
-```css
-#ingrediente-secreto {
+```css id="idcss01"
+#titulo {
   color: blue;
 }
 ```
 
 ---
 
-## 🔠 Propiedades de texto
+# 🧠 El símbolo (`#`)
 
-- `color` → color del texto
-- `font-family` → tipografía
-- `font-size` → tamaño
-- `font-weight` → grosor (100–900)
-- `font-style` → italic, normal
-- `text-align` → left, center, right, justify
-- `text-decoration` → underline, line-through
-- `line-height` → espacio entre líneas
-- `letter-spacing` → espacio entre letras
-- `text-transform` → uppercase, lowercase, capitalize
+Indica ID.
+
+```css
+#id
+```
 
 ---
 
-## 🔤 Tipografías externas Google Fonts
+# ⚠️ Buena práctica
+
+Usa:
+
+- clases para estilos
+- IDs para JavaScript o anclas
+
+No abuses IDs en CSS.
+
+---
+
+# 🔹 Selector universal
+
+Selecciona TODO.
+
+```css id="universal01"
+* {
+  margin: 0;
+}
+```
+
+---
+
+# 🔹 Selectores múltiples
+
+```css id="multi01"
+h1,
+h2,
+p {
+  color: black;
+}
+```
+
+---
+
+# 🔹 Selectores descendientes
+
+```css id="desc01"
+div p {
+  color: red;
+}
+```
+
+Selecciona:
+
+- `p`
+- dentro de `div`
+
+---
+
+# 🔹 Selector hijo directo
+
+```css id="child01"
+div > p {
+  color: blue;
+}
+```
+
+---
+
+# 🧠 Diferencia importante
+
+| Selector  | Función                |
+| --------- | ---------------------- |
+| `div p`   | Cualquier descendiente |
+| `div > p` | Solo hijo directo      |
+
+---
+
+# 🔠 Propiedades de texto
+
+---
+
+# 🎨 Color
+
+```css id="text01"
+color: red;
+```
+
+---
+
+# 🔤 Fuente
+
+```css id="text02"
+font-family: sans-serif;
+```
+
+---
+
+# 📏 Tamaño
+
+```css id="text03"
+font-size: 16px;
+```
+
+---
+
+# ⚖️ Grosor
+
+```css id="text04"
+font-weight: 700;
+```
+
+---
+
+# ✍️ Estilo
+
+```css id="text05"
+font-style: italic;
+```
+
+---
+
+# 📍 Alineación
+
+```css id="text06"
+text-align: center;
+```
+
+---
+
+# 🔡 Transformación
+
+```css id="text07"
+text-transform: uppercase;
+```
+
+---
+
+# 📏 Espaciado letras
+
+```css id="text08"
+letter-spacing: 2px;
+```
+
+---
+
+# 📏 Altura línea
+
+```css id="text09"
+line-height: 1.5;
+```
+
+---
+
+# 🔤 Tipografías externas
+
+Muy común usar:
+
+- Google Fonts
+
+---
+
+# 🌐 Ejemplo
 
 HTML:
 
-```html
+```html id="font01"
 <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
 ```
 
 CSS:
 
-```css
+```css id="font02"
 body {
   font-family: 'Inter', sans-serif;
 }
@@ -141,206 +386,785 @@ body {
 
 ---
 
-## Tipografía personalizada
+# 🧠 Fallback fonts
 
 ```css
+font-family: 'Inter', sans-serif;
+```
+
+Si falla:
+
+- Inter
+- usa sans-serif
+
+Porque internet eventualmente falla. Siempre.
+
+---
+
+# 🧩 `@font-face`
+
+Permite cargar fuentes personalizadas.
+
+```css id="font03"
 @font-face {
   font-family: 'Custom';
-  src: url('fonts/custom.woff2') format('woff2');
-  font-weight: 400;
+  src: url('fonts/custom.woff2');
 }
 ```
 
 ---
 
-## 📦 Box Model
+# 📦 Box Model
 
-(Modelo de caja) Todo elemento es una caja:
+TODO elemento HTML es una caja.
 
-```
-Contenido → Padding → Border → Margin Content → contenido Padding → espacio interno Border → borde Margin → espacio externo
+---
+
+# 🧠 Capas
+
+```txt
+Margin
+Border
+Padding
+Content
 ```
 
 ---
 
-### 📏 Width & Height
+# 📄 Visualización mental
 
-```css
+```txt
+┌───────────────┐
+│    Margin     │
+│ ┌───────────┐ │
+│ │  Border   │ │
+│ │ ┌───────┐ │ │
+│ │ │Padding│ │ │
+│ │ │Content│ │ │
+│ │ └───────┘ │ │
+│ └───────────┘ │
+└───────────────┘
+```
+
+---
+
+# 📏 Width & Height
+
+```css id="size01"
 div {
   width: 300px;
   height: 100px;
 }
 ```
 
-> Sin altura o contenido, el fondo puede no verse. No es magia, es CSS.
+---
+
+# ⚠️ Importante
+
+Muchos elementos crecen automáticamente según contenido.
 
 ---
 
-### 📐 Unidades relativas
+# 📦 Padding
 
-```css
-input {
-  width: 90%;
-} /* Se adapta al contenedor padre. */
+Espacio interno.
+
+```css id="padding01"
+padding: 20px;
 ```
 
 ---
 
-### 📦Padding & Margin
+# 📦 Margin
 
-```css
-padding: 10px;
-margin: 10px;
-```
+Espacio externo.
 
-#### Shorthand (sentido del reloj):
-
-```css
-padding: top right bottom left;
-padding: 10px 20px;
+```css id="margin01"
+margin: 20px;
 ```
 
 ---
 
-## ⚠️ Margin Collapse
+# 🧠 Shorthand
 
-Los márgenes verticales se fusionan. Se
-respeta el mayor valor.
-
----
-
-## 📏 Box Sizing
-
-```css
-box-sizing: border-box;
+```css id="short01"
+margin: top right bottom left;
 ```
 
-- `content-box` → suma padding y
-  border
-- `border-box` → todo se ajusta al tamaño definido
+---
 
-> Usa border-box siempre.
+# 📄 Ejemplo
+
+```css id="short02"
+margin: 10px 20px 30px 40px;
+```
 
 ---
 
-## 🎨 Colores
+# 🧠 Orden reloj
 
-- RGB: rgb(255, 0, 0);
-- HEX: #ff0000;
-- HSL: hsl(0, 100%, 50%);
-- Alpha (transparencia): rgba(255, 0, 0, 0.5);
-
----
-
-## 📏 Unidades de medida
-
-- `px` → fijo % → relativo
-- `em` → relativo al padre
-- `rem` → relativo al root
-- `vh / vw`→ viewport
-
-### Uso recomendado:
-
-- Texto → `rem `
-- Layout → `%, vh, vw`
-- Precisión → `px`
+```txt
+Top
+Right
+Bottom
+Left
+```
 
 ---
 
-## 🖼️ Fondos
+# ⚠️ Margin Collapse
 
-- `background: red;`
-- `background-image: url("img.jpg");`
-- `background-size: cover;`
-- `background-position: center;`
-- `background-repeat: no-repeat;`
+Los márgenes verticales pueden fusionarse.
+
+El navegador toma el mayor valor.
 
 ---
 
-## 🎨 Gradientes
+# 📏 Border
 
-`background: linear-gradient(to right, red, blue);`
-
-### Otros:
-
-- `radial-gradient`
-- `conic-gradient`
-
---- 🌫️
-Sombras box-shadow: 0 0 10px rgba(0,0,0,0.5); text-shadow: 1px 1px 2px black;
-
----
-
-## 🔲 Bordes
-
-```css
+```css id="border01"
 border: 2px solid black;
+```
+
+---
+
+# 🧩 Partes
+
+| Parte   | Función |
+| ------- | ------- |
+| `2px`   | Grosor  |
+| `solid` | Tipo    |
+| `black` | Color   |
+
+---
+
+# 🔲 Border Radius
+
+```css id="radius01"
 border-radius: 10px;
 ```
 
 ---
 
-## 🧠 Mini ejercicio (mejorado)
+# 🧠 Valores comunes
 
-### HTML
+| Valor  | Resultado  |
+| ------ | ---------- |
+| `0`    | Recto      |
+| `10px` | Redondeado |
+| `50%`  | Círculo    |
 
-```html
+---
+
+# 📏 Box Sizing
+
+Muy importante.
+
+```css id="boxsize01"
+box-sizing: border-box;
+```
+
+---
+
+# 🧠 Diferencia
+
+## `content-box`
+
+Suma:
+
+- padding
+- border
+
+al tamaño.
+
+---
+
+## `border-box`
+
+Incluye todo dentro tamaño definido.
+
+---
+
+# ✅ Recomendación universal
+
+```css id="boxsize02"
+* {
+  box-sizing: border-box;
+}
+```
+
+---
+
+# 🎨 Colores
+
+---
+
+# 🔴 RGB
+
+```css id="color01"
+color: rgb(255, 0, 0);
+```
+
+---
+
+# 🟥 HEX
+
+```css id="color02"
+color: #ff0000;
+```
+
+---
+
+# 🌈 HSL
+
+```css id="color03"
+color: hsl(0, 100%, 50%);
+```
+
+---
+
+# 🌫️ Transparencia
+
+```css id="color04"
+color: rgba(255, 0, 0, 0.5);
+```
+
+---
+
+# 📏 Unidades
+
+---
+
+# 🔹 px
+
+Valor fijo.
+
+```css
+font-size: 16px;
+```
+
+---
+
+# 🔹 %
+
+Relativo al contenedor.
+
+---
+
+# 🔹 em
+
+Relativo al padre.
+
+---
+
+# 🔹 rem
+
+Relativo al elemento raíz (`html`).
+
+---
+
+# 🔹 vh / vw
+
+Relativos al viewport.
+
+---
+
+# 🧠 Recomendaciones modernas
+
+| Uso       | Unidad          |
+| --------- | --------------- |
+| Texto     | `rem`           |
+| Layout    | `%`, `vw`, `vh` |
+| Precisión | `px`            |
+
+---
+
+# 🖼️ Fondos
+
+---
+
+# 🎨 Color fondo
+
+```css id="bg01"
+background: red;
+```
+
+---
+
+# 🖼️ Imagen fondo
+
+```css id="bg02"
+background-image: url('img.jpg');
+```
+
+---
+
+# 📏 Ajuste
+
+```css id="bg03"
+background-size: cover;
+```
+
+---
+
+# 📍 Posición
+
+```css id="bg04"
+background-position: center;
+```
+
+---
+
+# 🚫 Repetición
+
+```css id="bg05"
+background-repeat: no-repeat;
+```
+
+---
+
+# 🎨 Gradientes
+
+---
+
+# 🌈 Linear Gradient
+
+```css id="grad01"
+background: linear-gradient(to right, red, blue);
+```
+
+---
+
+# 🌌 Radial Gradient
+
+```css id="grad02"
+background: radial-gradient(circle, red, blue);
+```
+
+---
+
+# 🌪️ Conic Gradient
+
+```css id="grad03"
+background: conic-gradient(red, blue);
+```
+
+---
+
+# 🌫️ Sombras
+
+---
+
+# 📦 Box Shadow
+
+```css id="shadow01"
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+```
+
+---
+
+# 🔤 Text Shadow
+
+```css id="shadow02"
+text-shadow: 1px 1px 2px black;
+```
+
+---
+
+# 🧠 Estructura box-shadow
+
+```txt
+x y blur color
+```
+
+---
+
+# 📐 Display
+
+Define comportamiento del elemento.
+
+---
+
+# 🔹 Block
+
+```css id="display01"
+display: block;
+```
+
+Ocupa ancho completo.
+
+---
+
+# 🔹 Inline
+
+```css id="display02"
+display: inline;
+```
+
+No rompe línea.
+
+---
+
+# 🔹 Inline-block
+
+```css id="display03"
+display: inline-block;
+```
+
+Mezcla ambos.
+
+---
+
+# 🔹 None
+
+```css id="display04"
+display: none;
+```
+
+Oculta elemento.
+
+---
+
+# ⚡ Flexbox
+
+Sistema moderno layout.
+
+---
+
+# 📄 Activar flex
+
+```css id="flex01"
+display: flex;
+```
+
+---
+
+# 🧩 Propiedades importantes
+
+---
+
+# 📍 Dirección
+
+```css id="flex02"
+flex-direction: row;
+```
+
+---
+
+# 📍 Centrado horizontal
+
+```css id="flex03"
+justify-content: center;
+```
+
+---
+
+# 📍 Centrado vertical
+
+```css id="flex04"
+align-items: center;
+```
+
+---
+
+# 🧠 Centrado perfecto
+
+```css id="flex05"
+display: flex;
+justify-content: center;
+align-items: center;
+```
+
+CSS pasó años convirtiendo centrar elementos en una experiencia espiritual dolorosa hasta que apareció Flexbox.
+
+---
+
+# 🧱 Grid
+
+Sistema avanzado bidimensional.
+
+---
+
+# 📄 Activar grid
+
+```css id="grid01"
+display: grid;
+```
+
+---
+
+# 📐 Columnas
+
+```css id="grid02"
+grid-template-columns: 1fr 1fr 1fr;
+```
+
+---
+
+# 📏 Espaciado
+
+```css id="grid03"
+gap: 20px;
+```
+
+---
+
+# 🎞️ Transiciones
+
+Permiten animaciones suaves.
+
+```css id="trans01"
+transition: all 0.3s ease;
+```
+
+---
+
+# 🖱️ Hover
+
+```css id="hover01"
+button:hover {
+  background: black;
+}
+```
+
+---
+
+# 🎬 Animaciones
+
+---
+
+# 📄 Keyframes
+
+```css id="anim01"
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+```
+
+---
+
+# ▶️ Aplicar animación
+
+```css id="anim02"
+div {
+  animation: aparecer 1s ease;
+}
+```
+
+---
+
+# 📱 Responsive Design
+
+Adaptar diseño distintas pantallas.
+
+---
+
+# 📄 Media Query
+
+```css id="media01"
+@media (max-width: 768px) {
+  body {
+    background: black;
+  }
+}
+```
+
+---
+
+# 🧠 Mobile First
+
+Diseña primero para móviles.
+
+Luego escalas.
+
+---
+
+# 🧩 Pseudoclases
+
+Estados especiales.
+
+---
+
+# 📄 Ejemplos
+
+```css id="pseudo01"
+a:hover {
+}
+input:focus {
+}
+li:first-child {
+}
+```
+
+---
+
+# 🧩 Pseudoelementos
+
+Partes virtuales.
+
+```css id="pseudo02"
+p::before {
+}
+p::after {
+}
+```
+
+---
+
+# 🧼 Reset CSS
+
+Los navegadores tienen estilos por defecto.
+
+Muchos desarrolladores usan resets.
+
+---
+
+# 📄 Ejemplo básico
+
+```css id="reset01"
+* {
+  margin: 0;
+  padding: 0;
+}
+```
+
+---
+
+# 🧠 DevTools
+
+Herramientas navegador.
+
+Acceso:
+
+```txt
+F12
+```
+
+---
+
+# 🧩 Permiten
+
+- inspeccionar CSS
+- probar cambios
+- medir tamaños
+- analizar layouts
+
+---
+
+# 🧠 Mini proyecto completo
+
+---
+
+# 📄 HTML
+
+```html id="projecthtml01"
 <div class="card">
   <img src="img.webp" alt="Perfil" class="card_img" />
+
   <h1 class="card_title">Santiago</h1>
+
   <h2 class="card_subtitle">Genio, millonario, playboy, filántropo</h2>
-  <p class="card_content">Texto de ejemplo para la tarjeta.</p>
+
+  <p class="card_content">Texto ejemplo tarjeta.</p>
 </div>
 ```
 
 ---
 
-### CSS
+# 🎨 CSS
 
-```css
+```css id="projectcss01"
 * {
   box-sizing: border-box;
 }
+
 body {
-  background: #fff;
+  margin: 0;
   font-family: sans-serif;
-  color: #111;
+  background: #f5f5f5;
 }
+
 .card {
   width: 300px;
-  margin: 20px auto;
+  margin: 40px auto;
   padding: 20px;
-  background: #ff9f87;
+
+  background: white;
+
   border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+
 .card_img {
   width: 100px;
+  height: 100px;
+
   border-radius: 50%;
+
+  object-fit: cover;
 }
+
 .card_title {
   margin: 10px 0;
-  font-size: 22px;
 }
+
 .card_subtitle {
-  font-size: 12px;
-  font-weight: 300;
-}
-.card_content {
+  color: gray;
   font-size: 14px;
-  text-align: justify;
+}
+
+.card_content {
+  line-height: 1.5;
 }
 ```
 
 ---
 
-## 🧠 Buenas prácticas
+# 🧠 Buenas prácticas
 
-- Usa clases, evita IDs para estilos
-- Separa responsabilidades (HTML vs CSS)
-- Usa box-sizing:
-- border-box
-- Mantén consistencia en unidades
-- No sobrecargues con estilos innecesarios
-- Nombra clases de forma clara (card_title, no titulo2_final_v3)
+## ✅ Haz esto
+
+- Usa clases
+- Usa `border-box`
+- Usa Flexbox/Grid
+- Mantén consistencia
+- Usa nombres claros
+- Organiza archivos
+
+---
+
+## ❌ Evita esto
+
+- Styles inline
+- IDs para diseño
+- CSS gigante desordenado
+- Valores mágicos absurdos
+- `!important` en todo
+
+`!important` debería sentirse como romper vidrio de emergencia. No como decoración cotidiana.
+
+---
+
+# 🏁 Conclusión
+
+CSS transforma documentos HTML en interfaces modernas.
+
+Dominar CSS no es memorizar propiedades.  
+Es entender:
+
+- layout
+- flujo visual
+- jerarquía
+- responsive design
+- experiencia usuario
+
+Porque al final, escribir CSS es básicamente negociar visualmente con un navegador hiperliteral que interpreta todo exactamente como le dijiste… incluso cuando claramente no era lo que querías decir.

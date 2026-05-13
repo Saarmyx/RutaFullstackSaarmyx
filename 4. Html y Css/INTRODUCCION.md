@@ -220,46 +220,6 @@ Protegen:
 - Tarjetas
 - Datos privados
 
----
-
-# 🌍 Dominio
-
-Es el nombre legible de un sitio.
-
-Ejemplos:
-
-- `google.com`
-- `youtube.com`
-- `github.com`
-
----
-
-# 🧠 ¿Por qué existen?
-
-Porque memorizar IPs sería ridículo.
-
-Más fácil:
-
-```txt
-google.com
-```
-
-que:
-
-```txt
-142.250.190.78
-```
-
-Los humanos apenas recuerdan contraseñas simples. Pedirles memorizar IPv4 masivamente habría terminado con internet en los 90.
-
----
-
-# 🧠 DNS (Domain Name System)
-
-El DNS traduce dominios a direcciones IP.
-
----
-
 # ⚡ Ejemplo
 
 ```txt
@@ -751,3 +711,41 @@ La web moderna funciona gracias a múltiples capas trabajando juntas:
 Entender estos fundamentos cambia completamente cómo aprendes desarrollo.
 
 Porque cuando entiendes el sistema completo, dejas de memorizar tutoriales… y empiezas a razonar arquitectura.
+
+---
+
+# 🌍 Dominio
+
+Es el nombre legible de un sitio.
+
+Ejemplos:
+
+- `google.com`
+- `youtube.com`
+- `github.com`
+
+---
+
+# 🧠 ¿Por qué existen?
+
+Porque memorizar IPs sería ridículo.
+
+Más fácil:
+
+```txt
+google.com
+```
+
+que:
+
+```txt
+142.250.190.78
+```
+
+Los humanos apenas recuerdan contraseñas simples. Pedirles memorizar IPv4 masivamente habría terminado con internet en los 90.
+
+---
+
+# 🧠 DNS (Domain Name System)
+
+El DNS traduce dominios a direcciones IP.

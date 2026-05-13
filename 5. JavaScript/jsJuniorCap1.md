@@ -1,231 +1,1069 @@
-# Capitulo 1
+# ⚡ JavaScript Básico
 
-- Js es un lenguaje de programacion
-- Es un lenguaje intepretado, los compilados antes de ejutarse debe pasar por un programa para que funciones uno interpretado no pasa por un compilador, solo pasa por el interprete del navegador y se ejecuta linea por linea
-- Es un lenguaje orientado a objetos
-- Es imperativo, quiere decir que se ejecuta paso por paso o linea por linea
-- Es un lenguaje case sensitive, quiere decir que tiene diferencia entre mayusulas y minisculas
-- Es basado en prototipos/inttancias/classles, quiere decir que creamos en base a prototipos de js
-- Es de tipado debil, quiere decir que se puede cambiar los tipos de datos en base a se escribe
-- Es un lenguaje dinamico, quiere decir que la variable se ajusta al dato
-- Ecmascript
+JavaScript es el lenguaje que le da:
 
-## Editor de texto
+- comportamiento
+- interacción
+- lógica
 
-Se pueden usar muchos, pero de preferido es: [Vscode](https://code.visualstudio.com/)
+a una página web.
 
-## Manera de enlazar js
+Sin JavaScript, una web sería básicamente un folleto elegante. Muy bonito quizá. Muy inútil también.
 
-Como contenido:
+---
 
-```html
-<sript type="text/javascript">
-alert("Hola")
+# 🧠 ¿Qué es JavaScript?
+
+JavaScript es un:
+
+- lenguaje de programación
+- interpretado
+- dinámico
+- orientado a objetos
+- basado en prototipos
+
+y es el estándar principal para programación web en navegadores.
+
+---
+
+# 📜 ECMAScript
+
+## ⚠️ Importante
+
+JavaScript y ECMAScript NO son exactamente lo mismo.
+
+---
+
+# 🧠 Diferencia
+
+| Término    | Significado            |
+| ---------- | ---------------------- |
+| JavaScript | Lenguaje que usamos    |
+| ECMAScript | Especificación oficial |
+
+---
+
+# 📄 Ejemplo
+
+Cuando escuchas:
+
+```txt
+ES6
+ES2020
+ESNext
+```
+
+hablan de versiones de ECMAScript.
+
+---
+
+# 🧩 Características JavaScript
+
+---
+
+# 🔹 Interpretado
+
+No necesita compilación tradicional.
+
+El navegador:
+
+- lee código
+- interpreta
+- ejecuta línea por línea
+
+---
+
+# 🧠 Flujo simplificado
+
+```txt
+Código JS → Motor navegador → Ejecución
+```
+
+---
+
+# 🔹 Imperativo
+
+Se ejecuta paso a paso.
+
+```js id="imperative01"
+let numero = 10
+
+numero += 5
+
+console.log(numero)
+```
+
+Cada línea ocurre en orden.
+
+---
+
+# 🔹 Case Sensitive
+
+Mayúsculas y minúsculas importan.
+
+```js id="cases01"
+let nombre = 'Santiago'
+
+let Nombre = 'Thiago'
+```
+
+Son variables distintas.
+
+---
+
+# 🔹 Tipado dinámico
+
+El tipo puede cambiar.
+
+```js id="dynamic01"
+let dato = 'Hola'
+
+dato = 25
+
+dato = true
+```
+
+---
+
+# ⚠️ Esto es válido
+
+Aunque a veces convertir variables en criaturas mutantes impredecibles tampoco es exactamente una obra maestra arquitectónica.
+
+---
+
+# 🔹 Débilmente tipado
+
+JavaScript intenta convertir tipos automáticamente.
+
+---
+
+# 📄 Ejemplo
+
+```js id="weak01"
+'5' + 5
+```
+
+Resultado:
+
+```txt
+"55"
+```
+
+Porque convierte el número en string.
+
+---
+
+# 🔹 Basado en prototipos
+
+Los objetos pueden heredar de otros objetos.
+
+Esto es parte del núcleo de JavaScript moderno.
+
+---
+
+# 🧠 Importante
+
+Aunque hoy usamos:
+
+```txt
+class
+```
+
+internamente JavaScript sigue funcionando con prototipos.
+
+---
+
+# 💻 Editor de código
+
+El más usado actualmente es:
+
+[Visual Studio Code](https://code.visualstudio.com/?utm_source=chatgpt.com)
+
+---
+
+# 🔗 Cómo enlazar JavaScript
+
+---
+
+# ❌ Inline Script
+
+```html id="inlinejs01"
+<script>
+  alert('Hola')
 </script>
 ```
 
-En archivo externo:
+---
+
+# ⚠️ Problema
+
+Mezcla HTML y JavaScript.
+
+No escalable.
+
+---
+
+# ✅ Archivo externo
+
+```html id="externaljs01"
+<script src="app.js"></script>
+```
+
+---
+
+# 🧠 Ventajas
+
+- código limpio
+- reutilizable
+- mantenible
+- profesional
+
+---
+
+# ⚠️ Error común en tu ejemplo
+
+Es:
 
 ```html
-<sript src="archivo.js"></script>
+<script>
 ```
 
-## Variables
+NO:
 
-Es un espacio que se guarda en memoria
-Ejemplo: Si tengo un vaso y guardo un papel, puedo ponerle nombre al vaso y le puedo poner un valor al paper
-
-```js
-recipiente = 'papel'
-alert(recipiente)
+```html
+<sript></sript>
 ```
 
-Podemos inicializar una variable de 3 maneras distintas:
+El navegador no perdona errores ortográficos. Bastante grosero de su parte, honestamente.
 
-- var = goblal
-- let = Local
-- const = No cambia
-  y lo mostramos con alert
+---
 
-```js
-const nombre = 'Saarmyx'
-nombre = 'Hola' // Eso no se puede hacer
-alert(nombre)
+# 📦 Variables
 
-// No se puede inicialiar despues que se separa
-const numero // No se puede
-numero = 2
-alert(numero)
+Una variable es un espacio en memoria donde guardamos datos.
+
+---
+
+# 📄 Ejemplo
+
+```js id="var01"
+let nombre = 'Santiago'
 ```
 
-```js
-let numero // Se puede definir en otra linea
+---
 
-numero = 95
+# 🧠 Analogía simple
 
-alert(numero)
+```txt
+Caja → nombre → contenido
 ```
 
-### Tipos de datos
+---
 
-String = "cadena de texto"
-Number = Numero
-Boolean = Si/No
+# 📌 Declarar vs Inicializar
 
-### Casos especiales
+---
 
-Undefines = Indefinido
-Null = Si tiene un valor, que es nada
-Nan = No es un numero
+# 🔹 Declarar
 
-El scope es que las varibles funcionan en base a fragamentos
-
-El hoisting habla de las fases de creacion
-
-La concatenacion es la suma de 2 strings
-
-# Pruebas con prompt
-
-```js
-prompt('Hola rancio') // Esto nos devuelve un valor que sera lo que nosotros decimos
-
-// Para guardalo lo metemos en una variabble
-let nombre = prompt('Cual es tu nombre')
+```js id="declare01"
+let edad
 ```
 
-# Operadores en js
+---
 
-Operadores de asignacion
-Se asgina un valor mediante el valor de la izquierda a la derecha
+# 🔹 Inicializar
 
-```js
-let numero = 10
-
-numero += 5 // Esto le suma 5
-numero -= 5 // Esto le resta 5
-numero *= 5 // Esto le multiplica 5
-numero /= 5 // Esto le divide 5
-numero &= 5 // Esto le modula 5
-
-document.write(numero) // El document.write nos muestra el resultado en pantallas
+```js id="init01"
+edad = 18
 ```
 
-Operadores aritmeticos
+---
 
-```js
-let numero = 10
-let numero2 = 5
+# 🔹 Ambas juntas
 
-numero-- // De esta manera se le resta 1 al numero seleccionado
-
-document.write(numero) // El document.write nos muestra el resultado en pantallas
+```js id="both01"
+let edad = 18
 ```
 
-# Concatenacion
+---
 
-```js
-let saludo = 'Hola'
-let pregunta = 'Como estas'
+# 🧩 Tipos de variables
 
-let frase = saludo + '' + pregunta
+---
 
-let frase = saludo.concat(pregunta) // Esta es otra manera de concatenar
+# 🔹 `var`
 
-let nombre = 'saarmyx'
-let frase = `Soy ${nombre} y estoy caminando` // Esta la menra que se recomienda para concatenar
-
-document.write(frase)
+```js id="var02"
+var nombre = 'Santiago'
 ```
 
-# Backtiksc
+---
 
-Estos nos permiten hacer una mejor concatenacion y hasta mostrar html
+# ⚠️ Problemas
 
-```js
-let nombre = 'saarmyx'
-let frase = `Soy ${nombre} y estoy caminando` // Esta la menra que se recomienda para concatenar
+- scope extraño
+- hoisting confuso
+- comportamiento antiguo
 
-document.write(frase)
+Hoy casi no se recomienda.
+
+---
+
+# 🔹 `let`
+
+```js id="let01"
+let edad = 18
 ```
 
-## Escape de comillas
+---
 
-```js
-nombre = 'saarmyx'
-frase = "mi nombre es 'saarmyx' y soy pro"
-frase2 = "mi nombre es "saarmyx" y soy pro" // Esto no se puede
-// Se debe abrir con unas comillas diferentes si queremos poner comillas dentro del string
+# 🧠 Características
 
-document.write(frase)
+- puede cambiar
+- scope de bloque
+- moderna
+
+---
+
+# 🔹 `const`
+
+```js id="const01"
+const PI = 3.1416
 ```
 
-# Operadores
+---
 
-De comparacion
-Logicos = se basan en los de comparacion
+# 🧠 Características
 
-```js
-let num = 2
-let num2 = 5
+- NO puede reasignarse
+- requiere valor inicial
 
-// Este verifica si es igual a otro
-result = num == num2
+---
 
-// Este verifica si es diferenete a otro
-result = num != num2
+# ❌ Error
 
-// Este verifica si es estrictamente igual a otro
-result = num === num2
+```js id="const02"
+const nombre
 
-// Este verifica si es estrictamente difente a otro
-result = num !== num2
-
-// Este verifica si es mayor a otro
-result = num > num2
-
-// Este verifica si es mayor o igual a otro
-result = num >= num2
-
-// Este verifica si es menor a otro
-result = num < num2
-
-// Este verifica si es menor o igual a otro
-result = num <= num2
+nombre = 'Santiago'
 ```
 
-```js
-let valor = true
-let valor2 = true
+---
 
-let num = 21
-let num2 = 12
+# ✅ Correcto
 
-// Operador AND (&&), valida que
-let result = valor && valor2 // Si las 2 se cumplen da True, sino da False
-
-// Operador OR (||)
-let result = valor || valor2 // Si al menos 1 se cumplen da True, sino da False
-
-// Operador NOT (!)
-let result = !valor2 // Cambia el valor de la afirmacion
-
-let result = num < num2 || num == num2 // Aqui se aplica todo
+```js id="const03"
+const nombre = 'Santiago'
 ```
 
-# Condicionales
+---
 
-Es una sentencia que nos permite validar algo
+# ⚠️ Importante
 
-```js
-let nombre = 'Saarmyx'
-// If condicion inicial, sino se cumple pasa a else if y si no es ninguna pasa a else
+`const` NO vuelve inmutable un objeto.
 
-// Se ejecuta si la condicion en true
-if (nombre == 'Santiago') {
-  alert(`Tu nombre es ${nombre}`)
-} else if (nombre == 'Thiago') {
-  alert(`Tu nombre es ${nombre}`)
-} else {
-  alert(`Tu nombre es ${nombre}`)
+Solo evita reasignar referencia.
+
+---
+
+# 📄 Ejemplo
+
+```js id="const04"
+const usuario = {
+  nombre: 'Santiago',
+}
+
+usuario.nombre = 'Thiago'
+```
+
+Esto sí funciona.
+
+---
+
+# 🧠 Tipos de datos
+
+---
+
+# 🔤 String
+
+Texto.
+
+```js id="types01"
+let texto = 'Hola'
+```
+
+---
+
+# 🔢 Number
+
+Números.
+
+```js id="types02"
+let numero = 25
+```
+
+---
+
+# 🔘 Boolean
+
+Verdadero o falso.
+
+```js id="types03"
+let activo = true
+```
+
+---
+
+# ⚠️ Casos especiales
+
+---
+
+# 🔹 Undefined
+
+Variable sin valor.
+
+```js id="special01"
+let dato
+
+console.log(dato)
+```
+
+---
+
+# 🔹 Null
+
+Valor intencionalmente vacío.
+
+```js id="special02"
+let usuario = null
+```
+
+---
+
+# 🔹 NaN
+
+Not a Number.
+
+```js id="special03"
+let resultado = 'hola' * 5
+```
+
+---
+
+# 🧠 Resultado
+
+```txt
+NaN
+```
+
+---
+
+# 📚 Scope
+
+Define dónde existe una variable.
+
+---
+
+# 🔹 Scope global
+
+```js id="scope01"
+let nombre = 'Santiago'
+```
+
+Existe en todo programa.
+
+---
+
+# 🔹 Scope local
+
+```js id="scope02"
+if (true) {
+  let edad = 18
 }
 ```
+
+Solo existe dentro bloque.
+
+---
+
+# 🚀 Hoisting
+
+JavaScript mueve declaraciones internamente.
+
+---
+
+# 📄 Ejemplo
+
+```js id="hoist01"
+console.log(nombre)
+
+var nombre = 'Santiago'
+```
+
+---
+
+# ⚠️ Resultado
+
+```txt
+undefined
+```
+
+---
+
+# 🧠 Porque internamente ocurre:
+
+```js
+var nombre
+
+console.log(nombre)
+
+nombre = 'Santiago'
+```
+
+---
+
+# ⚠️ Con `let` y `const`
+
+Genera error.
+
+---
+
+# 🔗 Concatenación
+
+Unir textos.
+
+---
+
+# ❌ Forma antigua
+
+```js id="concat01"
+let frase = 'Hola ' + 'mundo'
+```
+
+---
+
+# ⚠️ Funciona
+
+Pero no es la mejor opción moderna.
+
+---
+
+# ✅ Template Literals
+
+Usan backticks:
+
+```txt
+`
+```
+
+---
+
+# 📄 Ejemplo
+
+```js id="template01"
+let nombre = 'Santiago'
+
+let frase = `Hola ${nombre}`
+```
+
+---
+
+# 🧠 Ventajas
+
+- legibilidad
+- multilínea
+- interpolación
+
+---
+
+# 📄 Multilínea
+
+```js id="template02"
+let texto = `
+Linea 1
+Linea 2
+`
+```
+
+---
+
+# ⚠️ Backticks ≠ comillas normales
+
+---
+
+# 🔹 Correcto
+
+```js id="quotes01"
+let texto = `Hola`
+```
+
+---
+
+# 🔹 Incorrecto
+
+```js id="quotes02"
+let texto = 'Hola ${nombre}'
+```
+
+No interpolará nada.
+
+---
+
+# 🧩 Escape de comillas
+
+---
+
+# ✅ Correcto
+
+```js id="escape01"
+let frase = "Mi nombre es 'Santiago'"
+```
+
+---
+
+# ❌ Incorrecto
+
+```js id="escape02"
+let frase = "Mi nombre es "Santiago""
+```
+
+---
+
+# ✅ Alternativa
+
+```js id="escape03"
+let frase = 'Mi nombre es "Santiago"'
+```
+
+---
+
+# 🪟 Alert, Prompt y Confirm
+
+---
+
+# 🔹 Alert
+
+Muestra mensaje.
+
+```js id="alert01"
+alert('Hola')
+```
+
+---
+
+# 🔹 Prompt
+
+Pide dato usuario.
+
+```js id="prompt01"
+let nombre = prompt('¿Cuál es tu nombre?')
+```
+
+---
+
+# ⚠️ Importante
+
+`prompt` devuelve:
+
+```txt
+string
+```
+
+siempre.
+
+---
+
+# 🔹 Confirm
+
+Devuelve booleano.
+
+```js id="confirm01"
+let respuesta = confirm('¿Aceptar?')
+```
+
+---
+
+# 🧠 Resultado
+
+```txt
+true / false
+```
+
+---
+
+# 🖥️ Mostrar datos
+
+---
+
+# ❌ `document.write`
+
+```js id="docwrite01"
+document.write('Hola')
+```
+
+---
+
+# ⚠️ Problema
+
+Puede reemplazar todo documento.
+
+Hoy casi no se usa profesionalmente.
+
+---
+
+# ✅ Mejor opciones
+
+```js id="console01"
+console.log('Hola')
+```
+
+o manipular DOM.
+
+---
+
+# ➕ Operadores asignación
+
+---
+
+# 📄 Ejemplo
+
+```js id="assign01"
+let numero = 10
+
+numero += 5
+```
+
+---
+
+# 🧠 Equivale a
+
+```js
+numero = numero + 5
+```
+
+---
+
+# 📊 Operadores comunes
+
+| Operador | Función    |
+| -------- | ---------- |
+| `+=`     | suma       |
+| `-=`     | resta      |
+| `*=`     | multiplica |
+| `/=`     | divide     |
+| `%=`     | módulo     |
+
+---
+
+# ⚠️ Error en tus apuntes
+
+No es:
+
+```js
+&=
+```
+
+Eso es operador bitwise.
+
+El módulo correcto es:
+
+```js
+%=
+```
+
+---
+
+# ➕ Operadores aritméticos
+
+---
+
+# 📄 Ejemplo
+
+```js id="math01"
+let numero = 10
+
+numero++
+```
+
+---
+
+# 🧠 Significa
+
+```txt
++1
+```
+
+---
+
+# 🔹 Otros
+
+```js
+numero--
+```
+
+```txt
+-1
+```
+
+---
+
+# ⚖️ Operadores comparación
+
+Devuelven:
+
+```txt
+true / false
+```
+
+---
+
+# 📄 Ejemplos
+
+```js id="compare01"
+5 == '5'
+```
+
+Resultado:
+
+```txt
+true
+```
+
+---
+
+# ⚠️ Porque convierte tipos
+
+---
+
+# ✅ Igualdad estricta
+
+```js id="compare02"
+5 === '5'
+```
+
+Resultado:
+
+```txt
+false
+```
+
+---
+
+# 🧠 Recomendación
+
+Usa SIEMPRE:
+
+```txt
+=== y !==
+```
+
+---
+
+# 📊 Comparadores
+
+| Operador | Función                 |
+| -------- | ----------------------- |
+| `==`     | igual                   |
+| `===`    | estrictamente igual     |
+| `!=`     | diferente               |
+| `!==`    | estrictamente diferente |
+| `>`      | mayor                   |
+| `<`      | menor                   |
+| `>=`     | mayor igual             |
+| `<=`     | menor igual             |
+
+---
+
+# 🔗 Operadores lógicos
+
+---
+
+# 🔹 AND (`&&`)
+
+```js id="logic01"
+true && true
+```
+
+Resultado:
+
+```txt
+true
+```
+
+---
+
+# 🔹 OR (`||`)
+
+```js id="logic02"
+true || false
+```
+
+Resultado:
+
+```txt
+true
+```
+
+---
+
+# 🔹 NOT (`!`)
+
+```js id="logic03"
+!true
+```
+
+Resultado:
+
+```txt
+false
+```
+
+---
+
+# 🧠 Condicionales
+
+Permiten tomar decisiones.
+
+---
+
+# 📄 Sintaxis
+
+```js id="if01"
+if (condicion) {
+}
+```
+
+---
+
+# 📄 Ejemplo completo
+
+```js id="if02"
+let nombre = 'Santiago'
+
+if (nombre === 'Santiago') {
+  alert(`Tu nombre es ${nombre}`)
+} else if (nombre === 'Thiago') {
+  alert(`Tu nombre es ${nombre}`)
+} else {
+  alert('No te conozco')
+}
+```
+
+---
+
+# ⚠️ Importante
+
+Usa:
+
+```txt
+===
+```
+
+en vez de:
+
+```txt
+==
+```
+
+---
+
+# 🧠 Truthy y Falsy
+
+JavaScript convierte valores automáticamente.
+
+---
+
+# ❌ Falsy
+
+```js
+false
+0
+;('')
+null
+undefined
+NaN
+```
+
+---
+
+# ✅ Todo lo demás
+
+Es truthy.
+
+---
+
+# 📄 Ejemplo
+
+```js id="truthy01"
+if ('Hola') {
+  console.log('Se ejecuta')
+}
+```
+
+---
+
+# 🧠 Buenas prácticas
+
+## ✅ Haz esto
+
+- usa `const` por defecto
+- usa `let` si cambiará
+- usa `===`
+- usa template literals
+- usa `console.log`
+
+---
+
+## ❌ Evita esto
+
+- abusar `var`
+- usar `document.write`
+- variables ambiguas
+- concatenación antigua excesiva
+
+---
+
+# ❌ Mal ejemplo
+
+```js
+let a = 5
+let b = 10
+let c = a + b
+```
+
+---
+
+# ✅ Mejor
+
+```js id="good01"
+let precio = 5
+
+let impuesto = 10
+
+let total = precio + impuesto
+```
+
+---
+
+# 🏁 Conclusión
+
+JavaScript básico parece sencillo hasta que descubres:
+
+- coerción rara
+- hoisting
+- scope
+- tipado dinámico
+
+y otras decisiones históricas tomadas probablemente después de tres cafés y una crisis existencial en 1995.
+
+Pero dominar estos fundamentos es lo que hace que luego entiendas:
+
+- DOM
+- eventos
+- async
+- APIs
+- frameworks
+- backend con Node.js
+
+Todo empieza aquí.
